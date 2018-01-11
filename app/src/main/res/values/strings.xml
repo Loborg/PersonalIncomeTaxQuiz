@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Személyi Jövedelemadó Quiz</string>
+
+    <string name="quiz_question_01">Nem adókedvezmény</string>
+    <string name="quiz_01_answer_a">a súlyosan fogyatékos személy esetén havi minimálbér 5%/hó</string>
+    <string name="quiz_01_answer_b">az önkéntes nyugdíjpénztárba történt befizetés 50%-a</string>
+    <string name="quiz_01_answer_c">az önkéntes kölcsönös biztosítópénztár(ak)ba befizetés 20%-a, lefeljebb 150.000 Ft.</string>
+
+    <string name="quiz_question_02">A tartós befektetés szerződés alapján</string>
+    <string name="quiz_02_answer_a">az adó mértéke 15%, ha a lekötést az elhelyezést követő hároméves lekötési időszak vége előtt szakítják meg</string>
+    <string name="quiz_02_answer_b">az adó mértéke 0% az ötéves lekötési időszak végén,</string>
+    <string name="quiz_02_answer_c">az adó mértéke 10% a hároméves lekötési időszak végén.</string>
+
+    <string name="quiz_question_03">Nem adócsökkentő tétel</string>
+    <string name="quiz_03_answer_a">a tandíj 30%-a, de legfeljebb 100.000 Ft,</string>
+    <string name="quiz_03_answer_b">meghatározott esetben a 2006. dec. 31-ig felvett, meghatározott lakáscélú hiteltörlesztés 40%-a (max. 120.000 Ft), ha a törlesztés 2006-ban megkezdődött,</string>
+    <string name="quiz_03_answer_c">a költségklnt eszámolt alapítványio támogatás összegének 25%-a</string>
+
+    <string name="quiz_question_04">Nem adócsökkentő</string>
+    <string name="quiz_04_answer_a">az adóhitel címén igénybevett befektetés 20%-a, legfeljebb 200.000 Ft,</string>
+    <string name="quiz_04_answer_b">a szövetkezeti üzletrész megvásárlására  fordított összeg 30%-a a tagnál,</string>
+    <string name="quiz_04_answer_c">a befizetett helyi adó 20%-a</string>
+
+    <string name="quiz_question_05">Az adójóváírás</string>
+    <string name="quiz_05_answer_a">a vér és az arra tekintettel megállapított adóalap-kiegészítés együttes összegének 16%-a,</string>
+    <string name="quiz_05_answer_b">2012. január 1-jétől megszűnt,</string>
+    <string name="quiz_05_answer_c">2.750.000 Ft-éves jövedelemig érvényesíthető teljes mértékben.</string>
+
+    <string name="quiz_question_06">Az átalányadó mértéke</string>
+    <string name="quiz_06_answer_a">kizárólag kiskereskedelmi tevékenység végzése esetén a bevétel 13%-ának 15%-a,</string>
+    <string name="quiz_06_answer_b">maghatározott kiskereskedelmi tevékenység esetén a bevétel 7%-ának 30%-a,</string>
+    <string name="quiz_06_answer_c">meghatározott tevékenység esetén az egyéni vállalkozó bevétele 20%-ának 15%-a.</string>
+
+    <string name="quiz_question_07">Az átalányadó adóelőleget</string>
+    <string name="quiz_07_answer_a">havonta a tárgyhót követő hó 10-ig,</string>
+    <string name="quiz_07_answer_b">havonta a tárgyhót követő hó 20-ig,</string>
+    <string name="quiz_07_answer_c">negyedévente a tárgyidőszakot követő hó 12-ig kell befizetni.</string>
+
+    <string name="quiz_question_08">2013-tól a tartós befektetési szerződés lekötési nyilvántartásába kerülhet</string>
+    <string name="quiz_08_answer_a">a zárt körben kibocsátott értékpapír</string>
+    <string name="quiz_08_answer_b">a belföldön fekvő ingatlan,</string>
+    <string name="quiz_08_answer_c">az ellenőrzött tőkepiaci ügylet keretében megszerzett nyilvános kibocsátásó értékpapír.</string>
+
+    <string name="quiz_question_09">Árfolyamnyereség számításánál a megszerzésre fordított összeg</string>
+    <string name="quiz_09_answer_a">a NAV által igazolt érték,</string>
+    <string name="quiz_09_answer_b">a vásárláskor érvényes tőzsdei átlagár,</string>
+    <string name="quiz_09_answer_c">az értékpapír-kölcsönzésből származó nyereség.</string>
+
+    <string name="quiz_question_10">15%-os adómértékkel adózik</string>
+    <string name="quiz_10_answer_a">a tőzsdei ügyletből származó nyereség,</string>
+    <string name="quiz_10_answer_b">az árfolyamnyereség,</string>
+    <string name="quiz_10_answer_c">az értékpapítr-kölcsönzésből származó nyereség.</string>
+
+    <!--Megoldások
+    quiz_question_01    b,c
+    quiz_question_02    a,b,c
+    quiz_question_03    a,b,c
+    quiz_question_04    a,b,c
+    quiz_question_05    b
+    quiz_question_06    a,c
+    quiz_question_07    c
+    quiz_question_08    c
+    quiz_question_09    c
+    quiz_question_10    a,b,c
+
+    Össz pontszám = 30 pont-->
+
+</resources>
