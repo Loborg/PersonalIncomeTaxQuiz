@@ -17,9 +17,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:gravity="center">
 
+            <ImageView
+                android:id="@+id/back_image_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@android:color/darker_gray"
+                app:srcCompat="@drawable/ic_navigate_before_black_48dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -33,23 +39,21 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/main_title"
+                android:text="@string/quiz_title_01"
                 android:textColor="@android:color/black"
-                android:textSize="36sp" />
+              android:textSize="36sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:gravity="center">
 
             <ImageView
                 android:id="@+id/next_image_01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:clickable="false"
                 android:tint="@android:color/darker_gray"
                 app:srcCompat="@drawable/ic_navigate_next_black_48dp" />
         </LinearLayout>
@@ -66,28 +70,55 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/main_promt_text"
-            android:textColor="@android:color/black" />
+            android:text="@string/quiz_question_01"
+            android:textColor="@android:color/black"
+            android:layout_margin="@dimen/quiz_answers_margin_padding"
+            android:textSize="18dp"/>
 
-        <EditText
-            android:id="@+id/name_textfield"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/main_page_textfield_01_hint"
-            android:layout_below="@id/prompt_text"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/prompt_text">
+                <CheckBox
+                    android:id="@+id/quiz_01_answer_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quiz_01_answer_a"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_margin="@dimen/quiz_answers_margin_padding"
+                    android:paddingLeft="@dimen/quiz_answers_margin_padding" />
 
-        <EditText
-            android:id="@+id/email_textfield"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/main_page_textfield_02_hint"
-            android:layout_below="@id/name_textfield"/>
+                <CheckBox
+                    android:id="@+id/quiz_01_answer_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quiz_01_answer_b"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_below="@id/quiz_01_answer_a"
+                    android:layout_marginLeft="@dimen/quiz_answers_margin_padding"
+                    android:layout_marginRight="@dimen/quiz_answers_margin_padding"
+                    android:layout_marginBottom="@dimen/quiz_answers_margin_padding"
+                    android:paddingLeft="@dimen/quiz_answers_margin_padding"/>
+
+                <CheckBox
+                    android:id="@+id/quiz_01_answer_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quiz_01_answer_c"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_below="@id/quiz_01_answer_b"
+                    android:layout_marginLeft="@dimen/quiz_answers_margin_padding"
+                    android:layout_marginRight="@dimen/quiz_answers_margin_padding"
+                    android:layout_marginBottom="@dimen/quiz_answers_margin_padding"
+                    android:paddingLeft="@dimen/quiz_answers_margin_padding"/>
+            </RelativeLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/main_page_explanation"
+            android:text="@string/common_prompt_message"
             android:layout_alignParentBottom="true"
-            android:textSize="10sp"/>
+            android:textSize="10sp"
+            android:layout_margin="@dimen/quiz_answers_margin_padding"/>
     </RelativeLayout>
 </LinearLayout>
