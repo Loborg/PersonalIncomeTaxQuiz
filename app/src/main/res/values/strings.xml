@@ -39,7 +39,7 @@
     <string name="quiz_question_08">2013-tól a tartós befektetési szerződés lekötési nyilvántartásába kerülhet</string>
     <string name="quiz_08_answer_a">a zárt körben kibocsátott értékpapír</string>
     <string name="quiz_08_answer_b">a belföldön fekvő ingatlan,</string>
-    <string name="quiz_08_answer_c">az ellenőrzött tőkepiaci ügylet keretében megszerzett nyilvános kibocsátásó értékpapír.</string>
+    <string name="quiz_08_answer_c">az ellenőrzött tőkepiaci ügylet keretében megszerzett nyilvános kibocsátású értékpapír.</string>
 
     <string name="quiz_question_09">Árfolyamnyereség számításánál a megszerzésre fordított összeg</string>
     <string name="quiz_09_answer_a">a NAV által igazolt érték,</string>
@@ -80,13 +80,34 @@
     <string name="quiz_title_09">Kilencedik kérdés</string>
     <string name="quiz_title_10">Tizedik kérdés</string>
 
+    <string name="evaluation_title">Értékelés</string>
+
     <!--Main page info text-->
     <string name="main_prompt_text">A kezdéshez add meg a neved és az email címed!</string>
     <string name="main_page_textfield_01_hint">Név *</string>
     <string name="main_page_textfield_02_hint">Email cím *</string>
     <string name="main_page_explanation">* A csillaggal jelölt mezők kitöltése kötelező</string>
-    
+
     <!--Common prompt message-->
     <string name="common_prompt_message">* Több helyes válasz is lehetséges.</string>
+
+    <!--Submite Button-->
+    <string name="submite_button_text">Rendben</string>
+
+    <!--Evaluation Button-->
+    <string name="evaluation_button">Értékelés</string>
+
+    <!--Restart Button-->
+    <string name="restart_button">Újrakezdés</string>
+
+    <!--Send button-->
+
+    <string name="send_button">Küldés</string>
+
+    <!--Submite Toast Message-->
+    <string name="submite_toast_message_mainpage">Az adatait rögzítettük</string>
+    <string name="submite_toast_message_questions_wrong">A válasz helytelen</string>
+    <string name="submite_toast_message_questions_good">A válasz helyes</string>
+    <string name="submite_toast_message_questions_not_all_good">Nem minden válasz helyes</string>
 
 </resources>

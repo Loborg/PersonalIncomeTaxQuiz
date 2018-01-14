@@ -16,7 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QuizOne"></activity>
+        <activity android:name=".QuizOne" />
+        <activity android:name=".QuizTwo" />
+        <activity android:name=".QuizThree" />
+        <activity android:name=".QuizFour" />
+        <activity android:name=".QuizFive" />
+        <activity android:name=".QuizSix" />
+        <activity android:name=".QuizSeven" />
+        <activity android:name=".QuizEight" />
+        <activity android:name=".QuizNine" />
+        <activity android:name=".QuizTen" />
+        <activity android:name=".Evaluation"></activity>
     </application>
 
 </manifest>

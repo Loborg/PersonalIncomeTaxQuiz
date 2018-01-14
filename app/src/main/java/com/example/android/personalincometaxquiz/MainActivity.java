@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void nextPage(View v){
-        Intent openQuizOne = new Intent(MainActivity.this, QuizOne.class);
+        Intent openQuizOne = new Intent(MainActivity.this, Evaluation.class);
         startActivity(openQuizOne);
     }
 }

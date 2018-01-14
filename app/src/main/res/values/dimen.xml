@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="quiz_answers_margin_padding">10dp</dimen>
+    <dimen name="general_margin_padding">10dp</dimen>
+    <dimen name="title_size">30sp</dimen>
+    <dimen name="evaluation_number_paddig">5dp</dimen>
+    <dimen name="evaluation_title_text_size">18sp</dimen>
 </resources>
