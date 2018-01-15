@@ -65,10 +65,8 @@
 
     Össz pontszám = 30 pont-->
 
-
     <!--Page titles-->
     <string name="main_title">Főoldal</string>
-
     <string name="quiz_title_01">Első kérdés</string>
     <string name="quiz_title_02">Második kérdés</string>
     <string name="quiz_title_03">Harmadik kérdés</string>
@@ -79,7 +77,6 @@
     <string name="quiz_title_08">Nyolcadik kérdés</string>
     <string name="quiz_title_09">Kilencedik kérdés</string>
     <string name="quiz_title_10">Tizedik kérdés</string>
-
     <string name="evaluation_title">Értékelés</string>
 
     <!--Main page info text-->
@@ -98,10 +95,9 @@
     <string name="evaluation_button">Értékelés</string>
 
     <!--Restart Button-->
-    <string name="restart_button">Újrakezdés</string>
+    <string name="restart_button_text">Újrakezdés</string>
 
     <!--Send button-->
-
     <string name="send_button">Küldés</string>
 
     <!--Submite Toast Message-->
@@ -110,4 +106,7 @@
     <string name="submite_toast_message_questions_good">A válasz helyes</string>
     <string name="submite_toast_message_questions_not_all_good">Nem minden válasz helyes</string>
 
+    <!--Evaluation page texts-->
+    <string name="quiz_point_text">Pontszám:</string>
+    <string name="final_score_title">Eredmény:</string>
 </resources>
