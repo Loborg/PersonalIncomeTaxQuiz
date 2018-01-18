@@ -2,6 +2,9 @@ package com.example.android.personalincometaxquiz;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
+import android.os.PersistableBundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -25,7 +28,23 @@ public class MainActivity extends AppCompatActivity {
         nextIconImage = findViewById(R.id.next_image_01);
         nameTextField = findViewById(R.id.name_textfield);
         emailTextField = findViewById(R.id.email_textfield);
+        setNextIconImageColorBasedOnEditTextStatus();
+    }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("next_icon_color_key", nextIconImage.getColorFilter().hashCode());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        nextIconImage.setColorFilter(savedInstanceState.getInt("next_icon_color_key"));
+    }
+
+    public void setNextIconImageColorBasedOnEditTextStatus(){
         nameTextField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
