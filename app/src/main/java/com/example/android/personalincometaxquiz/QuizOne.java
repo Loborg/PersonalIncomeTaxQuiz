@@ -4,34 +4,85 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 public class QuizOne extends AppCompatActivity {
 
+    public static final String QUIZ_01_ANSWER_A_CLICKABLE_KEY = "quiz_01_answer_a_clickable_key";
+    public static final String QUIZ_01_ANSWER_B_CLICKABLE_KEY = "quiz_01_answer_b_clickable_key";
+    public static final String QUIZ_01_ANSWER_C_CLICKABLE_KEY = "quiz_01_answer_c_clickable_key";
+    public static final String QUIZ_ASWER_A_BG_COLOR_KEY = "quiz_aswer_a_bg_color_key";
+    public static final String QUIZ_ASWER_B_BG_COLOR_KEY = "quiz_aswer_b_bg_color_key";
+    public static final String QUIZ_ASWER_C_BG_COLOR_KEY = "quiz_aswer_c_bg_color_key";
+    public static final String SUBMITE_BUTTON_STATUS_KEY = "submite_button_status_key";
+    public static final String NEXT_ICON_IMAGE_COLOR_KEY = "next_icon_image_color_key";
     public CheckBox quiz01Answer_A;
     public CheckBox quiz01Answer_B;
     public CheckBox quiz01Answer_C;
     public ImageView nextIconImage;
-    int colorA;
-    int colorB;
-    int colorC;
+    public int nextIconImageColor = Color.LTGRAY;
+    public Button quizOneSubmiteButton;
+    public boolean isSubmiteButtonClicked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_one);
 
-        quiz01Answer_A = findViewById(R.id.quiz_01_answer_a);
+        nextIconImage = findViewById(R.id.next_image_01);
+        quiz01Answer_A = findViewById(R.id.quiz_02_answer_a);
         quiz01Answer_B = findViewById(R.id.quiz_01_answer_b);
         quiz01Answer_C = findViewById(R.id.quiz_01_answer_c);
-        nextIconImage = findViewById(R.id.next_image_01);
+        quizOneSubmiteButton = findViewById(R.id.quiz_one_submite_button);
+
+        if (savedInstanceState != null){
+            if (savedInstanceState.containsKey(QUIZ_01_ANSWER_A_CLICKABLE_KEY))
+                quiz01Answer_A.setClickable(savedInstanceState.getBoolean(QUIZ_01_ANSWER_A_CLICKABLE_KEY));
+            if (savedInstanceState.containsKey(QUIZ_01_ANSWER_B_CLICKABLE_KEY))
+                quiz01Answer_B.setClickable(savedInstanceState.getBoolean(QUIZ_01_ANSWER_B_CLICKABLE_KEY));
+            if (savedInstanceState.containsKey(QUIZ_01_ANSWER_C_CLICKABLE_KEY))
+                quiz01Answer_C.setClickable(savedInstanceState.getBoolean(QUIZ_01_ANSWER_C_CLICKABLE_KEY));
+            if (savedInstanceState.containsKey(QUIZ_ASWER_A_BG_COLOR_KEY))
+                quiz01Answer_A.setBackgroundColor(savedInstanceState.getInt(QUIZ_ASWER_A_BG_COLOR_KEY));
+            if (savedInstanceState.containsKey(QUIZ_ASWER_B_BG_COLOR_KEY))
+                quiz01Answer_B.setBackgroundColor(savedInstanceState.getInt(QUIZ_ASWER_B_BG_COLOR_KEY));
+            if (savedInstanceState.containsKey(QUIZ_ASWER_C_BG_COLOR_KEY))
+                quiz01Answer_C.setBackgroundColor(savedInstanceState.getInt(QUIZ_ASWER_C_BG_COLOR_KEY));
+            if (savedInstanceState.containsKey(SUBMITE_BUTTON_STATUS_KEY))
+                isSubmiteButtonClicked = savedInstanceState.getBoolean(SUBMITE_BUTTON_STATUS_KEY);
+            if (savedInstanceState.containsKey(NEXT_ICON_IMAGE_COLOR_KEY))
+                nextIconImageColor = savedInstanceState.getInt(NEXT_ICON_IMAGE_COLOR_KEY);
+        }
+
+        nextIconImage.setColorFilter(nextIconImageColor);
+        if (isSubmiteButtonClicked){
+            nextIconImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent openQuizTwo = new Intent(QuizOne.this, QuizTwo.class);
+                    startActivity(openQuizTwo);
+                }
+            });
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(QUIZ_01_ANSWER_A_CLICKABLE_KEY, quiz01Answer_A.isClickable());
+        outState.putBoolean(QUIZ_01_ANSWER_B_CLICKABLE_KEY, quiz01Answer_B.isClickable());
+        outState.putBoolean(QUIZ_01_ANSWER_C_CLICKABLE_KEY, quiz01Answer_C.isClickable());
+        outState.putInt(QUIZ_ASWER_A_BG_COLOR_KEY, getQuizAnswrBGColor(quiz01Answer_A));
+        outState.putInt(QUIZ_ASWER_B_BG_COLOR_KEY, getQuizAnswrBGColor(quiz01Answer_B));
+        outState.putInt(QUIZ_ASWER_C_BG_COLOR_KEY, getQuizAnswrBGColor(quiz01Answer_C));
+        outState.putBoolean(SUBMITE_BUTTON_STATUS_KEY, isSubmiteButtonClicked);
+        outState.putInt(NEXT_ICON_IMAGE_COLOR_KEY, nextIconImageColor);
     }
 
     @Override
@@ -43,56 +94,11 @@ public class QuizOne extends AppCompatActivity {
         startActivity(openMainPage);
     }
 
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putBoolean("quiz_01_answer_a_clickable_key", quiz01Answer_A.isClickable());
-        outState.putBoolean("quiz_01_answer_b_clickable_key", quiz01Answer_B.isClickable());
-        outState.putBoolean("quiz_01_answer_c_clickable_key", quiz01Answer_C.isClickable());
-
-
-        Drawable bgAnswerA = quiz01Answer_A.getBackground().mutate();
-        if (bgAnswerA instanceof ColorDrawable) {
-            colorA = ((ColorDrawable) quiz01Answer_A.getBackground()).getColor();
-        }
-
-
-        Drawable bgAnswerB = quiz01Answer_B.getBackground().mutate();
-        if (bgAnswerB instanceof ColorDrawable) {
-            colorB = ((ColorDrawable) quiz01Answer_B.getBackground()).getColor();
-        }
-
-
-        Drawable bgAnswerC = quiz01Answer_C.getBackground().mutate();
-        if (bgAnswerC instanceof ColorDrawable) {
-            colorC = ((ColorDrawable) quiz01Answer_C.getBackground()).getColor();
-        }
-
-        outState.putInt("quiz_aswer_a_bg_color_key", colorA);
-        outState.putInt("quiz_aswer_b_bg_color_key", colorB);
-        outState.putInt("quiz_aswer_c_bg_color_key", colorC);
-
-        outState.putInt("next_icon_color_key", nextIconImage.getColorFilter().hashCode());
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-            quiz01Answer_A.setClickable(savedInstanceState.getBoolean("quiz_01_answer_a_clickable_key"));
-            quiz01Answer_B.setClickable(savedInstanceState.getBoolean("quiz_01_answer_b_clickable_key"));
-            quiz01Answer_C.setClickable(savedInstanceState.getBoolean("quiz_01_answer_c_clickable_key"));
-
-            quiz01Answer_A.setBackgroundColor(savedInstanceState.getInt("quiz_aswer_a_bg_color_key"));
-            quiz01Answer_B.setBackgroundColor(savedInstanceState.getInt("quiz_aswer_b_bg_color_key"));
-            quiz01Answer_C.setBackgroundColor(savedInstanceState.getInt("quiz_aswer_c_bg_color_key"));
-
-            nextIconImage.setColorFilter(savedInstanceState.getInt("next_icon_color_key"));
-
-    }
-
     public void quizOneSubmiteButtonClick(View v){
-        nextIconImage.setColorFilter(Color.BLACK);
-        nextIconImage.setOnClickListener(new View.OnClickListener(){
+        isSubmiteButtonClicked = true;
+        nextIconImageColor = Color.BLACK;
+        nextIconImage.setColorFilter(nextIconImageColor);
+        nextIconImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent openQuizTwo = new Intent(QuizOne.this, QuizTwo.class);
@@ -145,17 +151,17 @@ public class QuizOne extends AppCompatActivity {
     }
 
     public String quizOneAnswerVariation(){
-        if (quiz01Answer_A.isChecked() && quiz01Answer_B.isChecked() == false && quiz01Answer_C.isChecked() == false){
+        if (quiz01Answer_A.isChecked() && !quiz01Answer_B.isChecked() && !quiz01Answer_C.isChecked()){
             return "a"; //Your answer is incorrect //0 point
-        } else if (quiz01Answer_B.isChecked() && quiz01Answer_A.isChecked() == false && quiz01Answer_C.isChecked() == false){
+        } else if (quiz01Answer_B.isChecked() && !quiz01Answer_A.isChecked() && !quiz01Answer_C.isChecked()){
             return "b"; //There is one more correct answer //2 point
-        } else if (quiz01Answer_C.isChecked() && quiz01Answer_A.isChecked() == false && quiz01Answer_B.isChecked() == false){
+        } else if (quiz01Answer_C.isChecked() && !quiz01Answer_A.isChecked() && !quiz01Answer_B.isChecked()){
             return "c"; //There is one more correct answer //2 point
-        } else if (quiz01Answer_A.isChecked() && quiz01Answer_B.isChecked() && quiz01Answer_C.isChecked() == false){
+        } else if (quiz01Answer_A.isChecked() && quiz01Answer_B.isChecked() && !quiz01Answer_C.isChecked()){
             return "ab"; //Only one of your answers is correct //2 point
-        } else if (quiz01Answer_A.isChecked() && quiz01Answer_C.isChecked() && quiz01Answer_B.isChecked() == false){
+        } else if (quiz01Answer_A.isChecked() && quiz01Answer_C.isChecked() && !quiz01Answer_B.isChecked()){
             return "ac"; //Only one of your answers is correct //2 point
-        } else if (quiz01Answer_B.isChecked() && quiz01Answer_C.isChecked() && quiz01Answer_A.isChecked() == false){
+        } else if (quiz01Answer_B.isChecked() && quiz01Answer_C.isChecked() && !quiz01Answer_A.isChecked()){
             return "bc"; //All of your answers are correct //3 point
         } else if (quiz01Answer_A.isChecked() && quiz01Answer_B.isChecked() && quiz01Answer_C.isChecked()){
             return "abc"; //Only two of the answers are correct //1 point
@@ -167,5 +173,15 @@ public class QuizOne extends AppCompatActivity {
         quiz01Answer_A.setClickable(false);
         quiz01Answer_B.setClickable(false);
         quiz01Answer_C.setClickable(false);
+    }
+
+    public int getQuizAnswrBGColor(View quizAnswerView){
+        int QuizAnswrColor = 0;
+        Drawable answerBeckground = quizAnswerView.getBackground().mutate();
+        if (answerBeckground instanceof ColorDrawable) {
+            QuizAnswrColor = ((ColorDrawable) quizAnswerView.getBackground()).getColor();
+            return QuizAnswrColor;
+        }
+        return QuizAnswrColor;
     }
 }

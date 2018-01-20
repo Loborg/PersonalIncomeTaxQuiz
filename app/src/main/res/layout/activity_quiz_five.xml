@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.android.personalincometaxquiz.MainActivity"
+    tools:context="com.example.android.personalincometaxquiz.QuizFive"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -24,8 +24,9 @@
                 android:id="@+id/back_image_01"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:tint="@android:color/darker_gray"
-                app:srcCompat="@drawable/ic_navigate_before_black_48dp"/>
+                android:tint="@android:color/black"
+                app:srcCompat="@drawable/ic_navigate_before_black_48dp"
+                android:onClick="beckIconClick"/>
         </LinearLayout>
 
         <LinearLayout
@@ -54,7 +55,6 @@
                 android:id="@+id/next_image_01"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:tint="@android:color/darker_gray"
                 app:srcCompat="@drawable/ic_navigate_next_black_48dp" />
         </LinearLayout>
     </LinearLayout>
@@ -124,13 +124,15 @@
                 </RadioGroup>
 
                 <Button
+                    android:id="@+id/quiz_five_submite_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/radio_group"
                     android:layout_alignParentRight="true"
                     android:text="@string/submite_button_text"
                     android:textSize="10sp"
-                    android:layout_marginRight="@dimen/general_margin_padding"/>
+                    android:layout_marginRight="@dimen/general_margin_padding"
+                    android:onClick="quizFiveSubmiteButtonClick"/>
             </RelativeLayout>
         </ScrollView>
     </RelativeLayout>

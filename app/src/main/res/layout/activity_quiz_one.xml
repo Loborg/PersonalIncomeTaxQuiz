@@ -55,8 +55,7 @@
                 android:id="@+id/next_image_01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:tint="@android:color/darker_gray"
-                app:srcCompat="@drawable/ic_navigate_next_black_48dp" />
+                app:srcCompat="@drawable/ic_navigate_next_black_48dp"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -86,7 +85,7 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
-                    android:id="@+id/quiz_01_answer_a"
+                    android:id="@+id/quiz_02_answer_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/quiz_01_answer_a"
@@ -100,7 +99,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/quiz_01_answer_b"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:layout_below="@id/quiz_01_answer_a"
+                    android:layout_below="@id/quiz_02_answer_a"
                     android:layout_marginLeft="@dimen/general_margin_padding"
                     android:layout_marginRight="@dimen/general_margin_padding"
                     android:layout_marginBottom="@dimen/general_margin_padding"

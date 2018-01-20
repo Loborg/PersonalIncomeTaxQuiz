@@ -2,9 +2,6 @@ package com.example.android.personalincometaxquiz;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
-import android.os.PersistableBundle;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -16,9 +13,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String NEXT_ICON_IMAGE_COLOR_KEY = "next_icon_image_color_key";
     private EditText nameTextField;
     private EditText emailTextField;
     private ImageView nextIconImage;
+    public int color;
+    public int nextIconImageColor = Color.LTGRAY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,19 +29,17 @@ public class MainActivity extends AppCompatActivity {
         nameTextField = findViewById(R.id.name_textfield);
         emailTextField = findViewById(R.id.email_textfield);
         setNextIconImageColorBasedOnEditTextStatus();
+        if (savedInstanceState != null){
+            if (savedInstanceState.containsKey(NEXT_ICON_IMAGE_COLOR_KEY))
+                nextIconImageColor = savedInstanceState.getInt(NEXT_ICON_IMAGE_COLOR_KEY);
+        }
+        nextIconImage.setColorFilter(nextIconImageColor);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt("next_icon_color_key", nextIconImage.getColorFilter().hashCode());
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        nextIconImage.setColorFilter(savedInstanceState.getInt("next_icon_color_key"));
+        outState.putInt(NEXT_ICON_IMAGE_COLOR_KEY, nextIconImageColor);
     }
 
     public void setNextIconImageColorBasedOnEditTextStatus(){
