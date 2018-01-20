@@ -120,8 +120,6 @@ public class QuizFive extends AppCompatActivity {
             Toast answer_a = Toast.makeText(QuizFive.this, "You haven’t choose any of the answers", Toast.LENGTH_SHORT);
             answer_a.show();
             setAllRadioButtonNonClickable();
-        } else {
-
         }
     }
 
