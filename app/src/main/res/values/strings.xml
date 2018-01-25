@@ -11,10 +11,10 @@
     <string name="quiz_02_answer_b">az adó mértéke 0% az ötéves lekötési időszak végén,</string>
     <string name="quiz_02_answer_c">az adó mértéke 10% a hároméves lekötési időszak végén.</string>
 
-    <string name="quiz_question_03">Nem adócsökkentő tétel</string>
-    <string name="quiz_03_answer_a">a tandíj 30%-a, de legfeljebb 100.000 Ft,</string>
-    <string name="quiz_03_answer_b">meghatározott esetben a 2006. dec. 31-ig felvett, meghatározott lakáscélú hiteltörlesztés 40%-a (max. 120.000 Ft), ha a törlesztés 2006-ban megkezdődött,</string>
-    <string name="quiz_03_answer_c">a költségklnt eszámolt alapítványio támogatás összegének 25%-a</string>
+    <string name="quiz_question_03">Milyen szám látható a pirossal bekeretezett mezőben?</string>
+    <string name="quiz_03_answer_a">Adószám</string>
+    <string name="quiz_03_answer_b">Adóazonosító jel</string>
+    <string name="quiz_03_answer_c">Személyi szám</string>
 
     <string name="quiz_question_04">Nem adócsökkentő</string>
     <string name="quiz_04_answer_a">az adóhitel címén igénybevett befektetés 20%-a, legfeljebb 200.000 Ft,</string>
@@ -22,7 +22,7 @@
     <string name="quiz_04_answer_c">a befizetett helyi adó 20%-a</string>
 
     <string name="quiz_question_05">Az adójóváírás</string>
-    <string name="quiz_05_answer_a">a vér és az arra tekintettel megállapított adóalap-kiegészítés együttes összegének 16%-a,</string>
+    <string name="quiz_05_answer_a">a bér és az arra tekintettel megállapított adóalap-kiegészítés együttes összegének 16%-a,</string>
     <string name="quiz_05_answer_b">2012. január 1-jétől megszűnt,</string>
     <string name="quiz_05_answer_c">2.750.000 Ft-éves jövedelemig érvényesíthető teljes mértékben.</string>
 
@@ -71,7 +71,7 @@
     <string name="quiz_title_02">Második kérdés</string>
     <string name="quiz_title_03">Harmadik kérdés</string>
     <string name="quiz_title_04">Negyedik kérdés</string>
-    <string name="quiz_title_05">Otödik Kérdés</string>
+    <string name="quiz_title_05">Ötödik Kérdés</string>
     <string name="quiz_title_06">Hatodik Kérdés</string>
     <string name="quiz_title_07">Hetedik kérdés</string>
     <string name="quiz_title_08">Nyolcadik kérdés</string>
@@ -85,8 +85,12 @@
     <string name="main_page_textfield_02_hint">Email cím *</string>
     <string name="main_page_explanation">* A csillaggal jelölt mezők kitöltése kötelező</string>
 
-    <!--Common prompt message-->
-    <string name="common_prompt_message">* Több helyes válasz is lehetséges.</string>
+    <!--Quiz 3 hint text field hint message-->
+    <string name="quiz_03_text_field_hint">A válaszod</string>
+
+    <!--Common hint message-->
+    <string name="common_hint_message">* Több helyes válasz is lehetséges.</string>
+    <string name="common_hint_message_for_text_answer">* Válaszod szöveges formában add meg, további információért kattints a kérdőjelre.</string>
 
     <!--Submite Button-->
     <string name="submite_button_text">Rendben</string>

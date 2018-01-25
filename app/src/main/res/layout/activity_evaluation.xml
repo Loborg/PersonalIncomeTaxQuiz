@@ -80,18 +80,21 @@
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/q1_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="a" />
 
                         <TextView
+                            android:id="@+id/q1_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="b" />
 
                         <TextView
+                            android:id="@+id/q1_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
@@ -113,12 +116,12 @@
                             android:text="@string/quiz_point_text" />
 
                         <TextView
+                            android:id="@+id/points_for_quiz01"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="right"
-                            android:padding="@dimen/evaluation_number_paddig"
-                            android:text="3" />
+                            android:padding="@dimen/evaluation_number_paddig"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -146,18 +149,21 @@
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/q2_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="a" />
 
                         <TextView
+                            android:id="@+id/q2_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="b" />
 
                         <TextView
+                            android:id="@+id/q2_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
@@ -179,12 +185,12 @@
                             android:text="@string/quiz_point_text" />
 
                         <TextView
+                            android:id="@+id/points_for_quiz02"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="end"
-                            android:padding="@dimen/evaluation_number_paddig"
-                            android:text="3" />
+                            android:padding="@dimen/evaluation_number_paddig"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -212,18 +218,21 @@
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/q3_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="a" />
 
                         <TextView
+                            android:id="@+id/q3_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="b" />
 
                         <TextView
+                            android:id="@+id/q3_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
@@ -245,12 +254,12 @@
                             android:text="@string/quiz_point_text" />
 
                         <TextView
+                            android:id="@+id/points_for_quiz03"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="end"
-                            android:padding="@dimen/evaluation_number_paddig"
-                            android:text="3" />
+                            android:padding="@dimen/evaluation_number_paddig"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -279,18 +288,21 @@
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/q4_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="a" />
 
                         <TextView
+                            android:id="@+id/q4_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="b" />
 
                         <TextView
+                            android:id="@+id/q4_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
@@ -312,12 +324,12 @@
                             android:text="@string/quiz_point_text" />
 
                         <TextView
+                            android:id="@+id/points_for_quiz04"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="end"
-                            android:padding="@dimen/evaluation_number_paddig"
-                            android:text="3" />
+                            android:padding="@dimen/evaluation_number_paddig"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -345,18 +357,21 @@
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/q5_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="a" />
 
                         <TextView
+                            android:id="@+id/q5_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="b" />
 
                         <TextView
+                            android:id="@+id/q5_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
@@ -378,12 +393,12 @@
                             android:text="@string/quiz_point_text" />
 
                         <TextView
+                            android:id="@+id/points_for_quiz05"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="end"
-                            android:padding="@dimen/evaluation_number_paddig"
-                            android:text="3" />
+                            android:padding="@dimen/evaluation_number_paddig" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -411,18 +426,21 @@
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/q6_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="a" />
 
                         <TextView
+                            android:id="@+id/q6_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="b" />
 
                         <TextView
+                            android:id="@+id/q6_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
@@ -444,12 +462,12 @@
                             android:text="@string/quiz_point_text" />
 
                         <TextView
+                            android:id="@+id/points_for_quiz06"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="right"
-                            android:padding="@dimen/evaluation_number_paddig"
-                            android:text="3" />
+                            android:padding="@dimen/evaluation_number_paddig"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -477,18 +495,21 @@
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/q7_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="a" />
 
                         <TextView
+                            android:id="@+id/q7_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="b" />
 
                         <TextView
+                            android:id="@+id/q7_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
@@ -510,12 +531,12 @@
                             android:text="@string/quiz_point_text" />
 
                         <TextView
+                            android:id="@+id/points_for_quiz07"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="right"
-                            android:padding="@dimen/evaluation_number_paddig"
-                            android:text="3" />
+                            android:padding="@dimen/evaluation_number_paddig"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -543,18 +564,21 @@
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/q8_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="a" />
 
                         <TextView
+                            android:id="@+id/q8_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="b" />
 
                         <TextView
+                            android:id="@+id/q8_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
@@ -576,12 +600,12 @@
                             android:text="@string/quiz_point_text" />
 
                         <TextView
+                            android:id="@+id/points_for_quiz08"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="right"
-                            android:padding="@dimen/evaluation_number_paddig"
-                            android:text="3" />
+                            android:padding="@dimen/evaluation_number_paddig"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -609,18 +633,21 @@
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/q9_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="a" />
 
                         <TextView
+                            android:id="@+id/q9_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="b" />
 
                         <TextView
+                            android:id="@+id/q9_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
@@ -642,12 +669,12 @@
                             android:text="@string/quiz_point_text" />
 
                         <TextView
+                            android:id="@+id/points_for_quiz09"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="right"
-                            android:padding="@dimen/evaluation_number_paddig"
-                            android:text="3" />
+                            android:padding="@dimen/evaluation_number_paddig" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -675,18 +702,21 @@
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/q10_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="a" />
 
                         <TextView
+                            android:id="@+id/q10_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
                             android:text="b" />
 
                         <TextView
+                            android:id="@+id/q10_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/evaluation_number_paddig"
@@ -708,12 +738,12 @@
                             android:text="@string/quiz_point_text" />
 
                         <TextView
+                            android:id="@+id/points_for_quiz10"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="right"
-                            android:padding="@dimen/evaluation_number_paddig"
-                            android:text="3" />
+                            android:padding="@dimen/evaluation_number_paddig"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout> <!--End of EV numbers-->
@@ -764,12 +794,12 @@
                 android:text="@string/final_score_title" />
 
             <TextView
+                android:id="@+id/final_score"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="right"
-                android:padding="@dimen/evaluation_number_paddig"
-                android:text="3" />
+                android:padding="@dimen/evaluation_number_paddig" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

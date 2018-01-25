@@ -26,9 +26,18 @@ public class QuizTwo extends AppCompatActivity {
     public CheckBox quiz02Answer_B;
     public CheckBox quiz02Answer_C;
     public ImageView nextIconImage;
-    public int nextIconImageColor = Color.LTGRAY;
+    public static int nextIconImageColor = Color.LTGRAY;
     public Button quizTwoSubmiteButton;
-    public boolean isSubmiteButtonClicked;
+    public static boolean isSubmiteButtonClicked;
+    private static boolean quiz02Answer_a_isClickable = true;
+    private static boolean quiz02Answer_b_isClickable = true;
+    private static boolean quiz02Answer_c_isClickable = true;
+    private static boolean quiz02Answer_a_isChecked;
+    private static boolean quiz02Answer_b_isChecked;
+    private static boolean quiz02Answer_c_isChecked;
+    private static int quiz02Answer_a_bg_color;
+    private static int quiz02Answer_b_bg_color;
+    private static int quiz02Answer_c_bg_color;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,15 +70,18 @@ public class QuizTwo extends AppCompatActivity {
         }
 
         nextIconImage.setColorFilter(nextIconImageColor);
-        if (isSubmiteButtonClicked){
-            nextIconImage.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent openQuizTwo = new Intent(QuizTwo.this, QuizThree.class);
-                    startActivity(openQuizTwo);
+
+        nextIconImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isSubmiteButtonClicked) {
+                    openQ3Activity();
+                } else {
+                    Toast submiteButtonNotClicked = Toast.makeText(QuizTwo.this, "You haven submitted any answers yet", Toast.LENGTH_SHORT);
+                    submiteButtonNotClicked.show();
                 }
-            });
-        }
+            }
+        });
     }
 
     @Override
@@ -83,6 +95,26 @@ public class QuizTwo extends AppCompatActivity {
         outState.putInt(QUIZ_ASWER_C_BG_COLOR_KEY, getQuizAnswrBGColor(quiz02Answer_C));
         outState.putBoolean(SUBMITE_BUTTON_STATUS_KEY, isSubmiteButtonClicked);
         outState.putInt(NEXT_ICON_IMAGE_COLOR_KEY, nextIconImageColor);
+
+        saveViewStatus();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        quiz02Answer_A.setClickable(quiz02Answer_a_isClickable);
+        quiz02Answer_B.setClickable(quiz02Answer_b_isClickable);
+        quiz02Answer_C.setClickable(quiz02Answer_c_isClickable);
+
+        quiz02Answer_A.setChecked(quiz02Answer_a_isChecked);
+        quiz02Answer_B.setChecked(quiz02Answer_b_isChecked);
+        quiz02Answer_C.setChecked(quiz02Answer_c_isChecked);
+
+        quiz02Answer_A.setBackgroundColor(quiz02Answer_a_bg_color);
+        quiz02Answer_B.setBackgroundColor(quiz02Answer_b_bg_color);
+        quiz02Answer_C.setBackgroundColor(quiz02Answer_c_bg_color);
+
+        nextIconImage.setColorFilter(nextIconImageColor);
     }
 
     @Override
@@ -90,55 +122,53 @@ public class QuizTwo extends AppCompatActivity {
     }
 
     public void beckIconClick(View v){
-        Intent openQuizOne = new Intent(this, QuizOne.class);
-        startActivity(openQuizOne);
+        openQ1Activity();
     }
 
     public void quizTwoSubmiteButtonClick(View v){
         isSubmiteButtonClicked = true;
         nextIconImageColor = Color.BLACK;
         nextIconImage.setColorFilter(nextIconImageColor);
-        nextIconImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent openQuizTwo = new Intent(QuizTwo.this, QuizThree.class);
-                startActivity(openQuizTwo);
-            }
-        });
 
         if (quizTwoAnswerVariation().equals("a")){
             Toast answer_a = Toast.makeText(QuizTwo.this, "There is three correct answers", Toast.LENGTH_SHORT);
             answer_a.show();
             quiz02Answer_A.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
+            Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         } else if (quizTwoAnswerVariation().equals("b")){
             Toast answer_a = Toast.makeText(QuizTwo.this, "There is three correct answers", Toast.LENGTH_SHORT);
             answer_a.show();
             quiz02Answer_B.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
+            Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         } else if (quizTwoAnswerVariation().equals("c")){
             Toast answer_a = Toast.makeText(QuizTwo.this, "There is three correct answers", Toast.LENGTH_SHORT);
             answer_a.show();
             quiz02Answer_C.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
+            Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         } else if (quizTwoAnswerVariation().equals("ab")){
             Toast answer_a = Toast.makeText(QuizTwo.this, "There is three correct answers", Toast.LENGTH_SHORT);
             answer_a.show();
             quiz02Answer_A.setBackgroundColor(Color.GREEN);
             quiz02Answer_B.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
+            Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         } else if (quizTwoAnswerVariation().equals("ac")){
             Toast answer_a = Toast.makeText(QuizTwo.this, "There is three correct answers", Toast.LENGTH_SHORT);
             answer_a.show();
             quiz02Answer_A.setBackgroundColor(Color.GREEN);
             quiz02Answer_C.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
+            Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         } else if (quizTwoAnswerVariation().equals("bc")){
             Toast answer_a = Toast.makeText(QuizTwo.this, "There is three correct answers", Toast.LENGTH_SHORT);
             answer_a.show();
             quiz02Answer_B.setBackgroundColor(Color.GREEN);
             quiz02Answer_C.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
+            Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         } else if (quizTwoAnswerVariation().equals("abc")){
             Toast answer_a = Toast.makeText(QuizTwo.this, "All of your answers are correct", Toast.LENGTH_SHORT);
             answer_a.show();
@@ -146,10 +176,12 @@ public class QuizTwo extends AppCompatActivity {
             quiz02Answer_A.setBackgroundColor(Color.GREEN);
             quiz02Answer_B.setBackgroundColor(Color.GREEN);
             quiz02Answer_C.setBackgroundColor(Color.GREEN);
+            Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         } else if (quizTwoAnswerVariation().equals("")){
             Toast answer_a = Toast.makeText(QuizTwo.this, "You haven’t choose any of the answers", Toast.LENGTH_SHORT);
             answer_a.show();
             setAllCheckBoxNonClickable();
+            Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         }
     }
 
@@ -186,5 +218,30 @@ public class QuizTwo extends AppCompatActivity {
             return QuizAnswrColor;
         }
         return QuizAnswrColor;
+    }
+
+    public void openQ3Activity(){
+        saveViewStatus();
+        Intent openQuizThree = new Intent(QuizTwo.this, QuizThree.class);
+        startActivity(openQuizThree);
+    }
+
+    public void openQ1Activity(){
+        Intent openQ1 = new Intent(this, QuizOne.class);
+        startActivity(openQ1);
+    }
+
+    public void saveViewStatus(){
+        quiz02Answer_a_isClickable = quiz02Answer_A.isClickable();
+        quiz02Answer_b_isClickable = quiz02Answer_B.isClickable();
+        quiz02Answer_c_isClickable = quiz02Answer_C.isClickable();
+
+        quiz02Answer_a_isChecked = quiz02Answer_A.isChecked();
+        quiz02Answer_b_isChecked = quiz02Answer_B.isChecked();
+        quiz02Answer_c_isChecked = quiz02Answer_C.isChecked();
+
+        quiz02Answer_a_bg_color = getQuizAnswrBGColor(quiz02Answer_A);
+        quiz02Answer_b_bg_color = getQuizAnswrBGColor(quiz02Answer_B);
+        quiz02Answer_c_bg_color = getQuizAnswrBGColor(quiz02Answer_C);
     }
 }

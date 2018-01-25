@@ -18,20 +18,23 @@ public class MainActivity extends AppCompatActivity {
     private EditText emailTextField;
     private ImageView nextIconImage;
     public int color;
-    public int nextIconImageColor = Color.LTGRAY;
+    public static int nextIconImageColor = Color.LTGRAY;
+    private static String nameTextFieldText;
+    private static String emailTextFieldText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         nextIconImage = findViewById(R.id.next_image_01);
         nameTextField = findViewById(R.id.name_textfield);
         emailTextField = findViewById(R.id.email_textfield);
+
         setNextIconImageColorBasedOnEditTextStatus();
+
         if (savedInstanceState != null){
             if (savedInstanceState.containsKey(NEXT_ICON_IMAGE_COLOR_KEY))
-                nextIconImageColor = savedInstanceState.getInt(NEXT_ICON_IMAGE_COLOR_KEY);
+                nextIconImage.setColorFilter(savedInstanceState.getInt(NEXT_ICON_IMAGE_COLOR_KEY));
         }
         nextIconImage.setColorFilter(nextIconImageColor);
     }
@@ -40,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(NEXT_ICON_IMAGE_COLOR_KEY, nextIconImageColor);
+
+        saveViewStatus();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        nameTextField.setText(nameTextFieldText);
+        emailTextField.setText(emailTextFieldText);
     }
 
     public void setNextIconImageColorBasedOnEditTextStatus(){
@@ -54,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 if (!emailTextFieldText().equals("")){
                     nextIconImage.setColorFilter(Color.BLACK);
+
                 } else {
                     nextIconImage.setColorFilter(Color.LTGRAY);
                 }
@@ -88,11 +101,27 @@ public class MainActivity extends AppCompatActivity {
 
     public void nextIconClick(View v){
         if (!nameTextFieldText().equals("") && !emailTextFieldText().equals("")){
-            Intent openFirstQuiz = new Intent(this, QuizOne.class);
-            startActivity(openFirstQuiz);
+            sendDataToEvaluation();
+            openQuizOneActivity();
         } else {
             Toast emptiTextFieldWarning = Toast.makeText(this, "You didn’t fill out all the required fields!", Toast.LENGTH_SHORT);
             emptiTextFieldWarning.show();
         }
+    }
+
+    public void sendDataToEvaluation(){
+        Evaluation.userName = nameTextFieldText();
+        Evaluation.emailAdress = emailTextFieldText();
+    }
+
+    public void openQuizOneActivity(){
+        saveViewStatus();
+        Intent openFirstQuiz = new Intent(this, QuizOne.class);
+        startActivity(openFirstQuiz);
+    }
+
+    public void saveViewStatus(){
+        nameTextFieldText = nameTextFieldText();
+        emailTextFieldText = emailTextFieldText();
     }
 }

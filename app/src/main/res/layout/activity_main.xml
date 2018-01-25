@@ -95,15 +95,6 @@
                         android:layout_below="@id/name_textfield"
                         android:layout_margin="@dimen/general_margin_padding"
                         android:paddingLeft="@dimen/general_margin_padding"/>
-
-                    <!--<Button-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_below="@+id/email_textfield"-->
-                        <!--android:layout_alignParentRight="true"-->
-                        <!--android:text="@string/submite_button_text"-->
-                        <!--android:textSize="10sp"-->
-                        <!--android:layout_marginRight="@dimen/general_margin_padding"/>-->
                 </RelativeLayout>
 
             <TextView

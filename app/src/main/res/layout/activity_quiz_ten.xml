@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.android.personalincometaxquiz.MainActivity"
+    tools:context="com.example.android.personalincometaxquiz.QuizTen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -24,8 +24,9 @@
                 android:id="@+id/back_image_01"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:tint="@android:color/darker_gray"
-                app:srcCompat="@drawable/ic_navigate_before_black_48dp"/>
+                android:tint="@android:color/black"
+                app:srcCompat="@drawable/ic_navigate_before_black_48dp"
+                android:onClick="beckIconClick"/>
         </LinearLayout>
 
         <LinearLayout
@@ -49,13 +50,6 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:gravity="center">
-
-            <ImageView
-                android:id="@+id/next_image_01"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:tint="@android:color/darker_gray"
-                app:srcCompat="@drawable/ic_navigate_next_black_48dp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -78,7 +72,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/prompt_text">
+            android:layout_below="@id/prompt_text"
+            android:id="@+id/scrollView2">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -117,32 +112,37 @@
                     android:layout_marginBottom="@dimen/general_margin_padding"
                     android:paddingLeft="@dimen/general_margin_padding"/>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/quiz_10_answer_c"
-                    android:layout_alignParentRight="true"
-                    android:text="@string/submite_button_text"
-                    android:textSize="10sp"
-                    android:layout_marginRight="@dimen/general_margin_padding"/>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/quiz_10_answer_c"
-                    android:layout_alignParentLeft="true"
-                    android:text="@string/evaluation_button"
-                    android:textSize="10sp"
-                    android:layout_marginLeft="@dimen/general_margin_padding"/>
             </RelativeLayout>
         </ScrollView>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/common_prompt_message"
+            android:text="@string/common_hint_message"
             android:layout_alignParentBottom="true"
             android:textSize="10sp"
-            android:padding="@dimen/general_margin_padding"/>
+            android:padding="@dimen/general_margin_padding"
+            android:id="@+id/textView" />
+
+        <Button
+            android:id="@+id/evaluation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/quiz_ten_submite_button"
+            android:layout_toStartOf="@+id/quiz_ten_submite_button"
+            android:text="@string/evaluation_button"
+            android:textSize="10sp"
+            android:onClick="evaluationButtonClick"/>
+
+        <Button
+            android:id="@+id/quiz_ten_submite_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView"
+            android:layout_alignEnd="@+id/prompt_text"
+            android:onClick="quizTenSubmiteButtonClick"
+            android:text="@string/submite_button_text"
+            android:textSize="10sp" />
+
     </RelativeLayout>
 </LinearLayout>

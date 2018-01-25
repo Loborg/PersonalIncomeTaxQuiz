@@ -133,7 +133,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/common_prompt_message"
+            android:text="@string/common_hint_message"
             android:layout_alignParentBottom="true"
             android:textSize="10sp"
             android:padding="@dimen/general_margin_padding"/>
