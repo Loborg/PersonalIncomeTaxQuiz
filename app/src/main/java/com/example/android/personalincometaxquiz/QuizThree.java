@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class QuizThree extends AppCompatActivity {
@@ -117,6 +118,39 @@ public class QuizThree extends AppCompatActivity {
             isSubmiteButtonClicked = true;
             quiz03TextAnswer.setEnabled(false);
         }
+    }
+
+    public static void evaluateQuizThree(String[] quizAnswers,
+                                       TextView pointsForQuizTextView,
+                                       TextView textAnswer,
+                                       int pointCounter,
+                                       int red, int gray,
+                                       int green,
+                                       String zeroPoint,
+                                       String threePoint)
+    {
+        switch (quizAnswers[2]) {
+            case "tax id":
+                textAnswer.setText(quizAnswers[2]);
+                setBeckgroundColor(textAnswer, green);
+                pointsForQuizTextView.setText(threePoint);
+                Evaluation.pointCounter = pointCounter + 3;
+                break;
+            case "":
+                textAnswer.setText("tax id");
+                setBeckgroundColor(textAnswer, gray);
+                pointsForQuizTextView.setText(zeroPoint);
+                break;
+            default:
+                textAnswer.setText(quizAnswers[2]);
+                setBeckgroundColor(textAnswer, red);
+                pointsForQuizTextView.setText(zeroPoint);
+                break;
+        }
+    }
+
+    public static void setBeckgroundColor(View quizTextView, int textViewBgColor){
+        quizTextView.setBackgroundColor(textViewBgColor);
     }
 
     public void openQ4Activity(){

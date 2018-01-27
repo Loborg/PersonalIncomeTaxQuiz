@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class QuizNine extends AppCompatActivity {
@@ -169,6 +170,45 @@ public class QuizNine extends AppCompatActivity {
             return "c";  //Your answer is correct //3 point
         }
         return "";
+    }
+
+    public static void evaluateQuizNine(String[] quizAnswers,
+                                         TextView pointsForQuizTextView,
+                                         TextView quizAnswer_a,
+                                         TextView quizAnswer_b,
+                                         TextView quizAnswer_c,
+                                         int pointCounter,
+                                         int red,
+                                         int gray,
+                                         int green,
+                                         String zeroPoint,
+                                         String threePoint)
+    {
+        switch (quizAnswers[8]) {
+            case "a":
+                setBeckgroundColor(quizAnswer_a, red);
+                setBeckgroundColor(quizAnswer_c, gray);
+                pointsForQuizTextView.setText(zeroPoint);
+                break;
+            case "b":
+                setBeckgroundColor(quizAnswer_b, red);
+                setBeckgroundColor(quizAnswer_c, gray);
+                pointsForQuizTextView.setText(zeroPoint);
+
+                break;
+            case "c":
+                setBeckgroundColor(quizAnswer_c, green);
+                pointsForQuizTextView.setText(threePoint);
+                Evaluation.pointCounter = pointCounter + 3;
+                break;
+            default:
+                pointsForQuizTextView.setText(zeroPoint);
+                break;
+        }
+    }
+
+    public static void setBeckgroundColor(View quizTextView, int textViewBgColor){
+        quizTextView.setBackgroundColor(textViewBgColor);
     }
 
     public void setAllRadioButtonNonClickable(){

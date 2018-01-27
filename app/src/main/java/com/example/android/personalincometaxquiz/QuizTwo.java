@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class QuizTwo extends AppCompatActivity {
@@ -202,6 +203,82 @@ public class QuizTwo extends AppCompatActivity {
             return "abc"; //All of your answers are correct //3 point
         }
         return ""; //You haven’t choose any of the answers //0 point
+    }
+
+    public static void evaluateQuizTwo(String[] quizAnswers,
+                                       TextView pointsForQuizTextView,
+                                       TextView quizAnswer_a,
+                                       TextView quizAnswer_b,
+                                       TextView quizAnswer_c,
+                                       int pointCounter,
+                                       int red, int gray,
+                                       int green,
+                                       String zeroPoint,
+                                       String onePoint,
+                                       String twoPoint,
+                                       String threePoint)
+    {
+        switch (quizAnswers[1]) {
+            case "a":
+                setBeckgroundColor(quizAnswer_a, green);
+                setBeckgroundColor(quizAnswer_b, gray);
+                setBeckgroundColor(quizAnswer_c, gray);
+                pointsForQuizTextView.setText(onePoint);
+                Evaluation.pointCounter = pointCounter + 1;
+                break;
+            case "b":
+                setBeckgroundColor(quizAnswer_a, gray);
+                setBeckgroundColor(quizAnswer_b, green);
+                setBeckgroundColor(quizAnswer_c, gray);
+                pointsForQuizTextView.setText(onePoint);
+                Evaluation.pointCounter = pointCounter + 1;
+                break;
+            case "c":
+                setBeckgroundColor(quizAnswer_a, gray);
+                setBeckgroundColor(quizAnswer_b, gray);
+                setBeckgroundColor(quizAnswer_c, green);
+                pointsForQuizTextView.setText(onePoint);
+                Evaluation.pointCounter = pointCounter + 1;
+                break;
+            case "ab":
+                setBeckgroundColor(quizAnswer_a, green);
+                setBeckgroundColor(quizAnswer_b, green);
+                setBeckgroundColor(quizAnswer_c, gray);
+                pointsForQuizTextView.setText(twoPoint);
+                Evaluation.pointCounter = pointCounter + 2;
+                break;
+            case "ac":
+                setBeckgroundColor(quizAnswer_a, green);
+                setBeckgroundColor(quizAnswer_b, gray);
+                setBeckgroundColor(quizAnswer_c, green);
+                pointsForQuizTextView.setText(twoPoint);
+                Evaluation.pointCounter = pointCounter + 2;
+                break;
+            case "bc":
+                setBeckgroundColor(quizAnswer_a, gray);
+                setBeckgroundColor(quizAnswer_b, green);
+                setBeckgroundColor(quizAnswer_c, green);
+                pointsForQuizTextView.setText(twoPoint);
+                Evaluation.pointCounter = pointCounter + 2;
+                break;
+            case "abc":
+                setBeckgroundColor(quizAnswer_a, green);
+                setBeckgroundColor(quizAnswer_b, green);
+                setBeckgroundColor(quizAnswer_c, green);
+                pointsForQuizTextView.setText(threePoint);
+                Evaluation.pointCounter = pointCounter + 3;
+                break;
+            case "":
+                setBeckgroundColor(quizAnswer_a, gray);
+                setBeckgroundColor(quizAnswer_b, gray);
+                setBeckgroundColor(quizAnswer_c, gray);
+                pointsForQuizTextView.setText(zeroPoint);
+                break;
+        }
+    }
+
+    public static void setBeckgroundColor(View quizTextView, int textViewBgColor){
+        quizTextView.setBackgroundColor(textViewBgColor);
     }
 
     public void setAllCheckBoxNonClickable(){

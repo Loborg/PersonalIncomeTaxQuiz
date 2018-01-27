@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class QuizSix extends AppCompatActivity {
@@ -199,6 +200,81 @@ public class QuizSix extends AppCompatActivity {
             return "abc"; //Only two of the answers are correct //1 point
         }
         return ""; //You haven’t choose any of the answers //0 point
+    }
+
+    public static void evaluateQuizSix(String[] quizAnswers,
+                                       TextView pointsForQuizTextView,
+                                       TextView quizAnswer_a,
+                                       TextView quizAnswer_b,
+                                       TextView quizAnswer_c,
+                                       int pointCounter,
+                                       int red, int gray,
+                                       int green,
+                                       String zeroPoint,
+                                       String onePoint,
+                                       String twoPoint,
+                                       String threePoint)
+    {
+        switch (quizAnswers[5]) { //a,c
+            case "a":
+                setBeckgroundColor(quizAnswer_a, green);
+                setBeckgroundColor(quizAnswer_b, 0);
+                setBeckgroundColor(quizAnswer_c, gray);
+                pointsForQuizTextView.setText(twoPoint);
+                Evaluation.pointCounter = pointCounter + 2;
+                break;
+            case "b":
+                setBeckgroundColor(quizAnswer_a, gray);
+                setBeckgroundColor(quizAnswer_b, red);
+                setBeckgroundColor(quizAnswer_c, gray);
+                pointsForQuizTextView.setText(zeroPoint);
+                break;
+            case "c":
+                setBeckgroundColor(quizAnswer_a, gray);
+                setBeckgroundColor(quizAnswer_b, 0);
+                setBeckgroundColor(quizAnswer_c, green);
+                pointsForQuizTextView.setText(twoPoint);
+                Evaluation.pointCounter = pointCounter + 2;
+                break;
+            case "ab":
+                setBeckgroundColor(quizAnswer_a, green);
+                setBeckgroundColor(quizAnswer_b, red);
+                setBeckgroundColor(quizAnswer_c, gray);
+                pointsForQuizTextView.setText(twoPoint);
+                Evaluation.pointCounter = pointCounter + 2;
+                break;
+            case "ac":
+                setBeckgroundColor(quizAnswer_a, green);
+                setBeckgroundColor(quizAnswer_b, 0);
+                setBeckgroundColor(quizAnswer_c, green);
+                pointsForQuizTextView.setText(threePoint);
+                Evaluation.pointCounter = pointCounter + 3;
+                break;
+            case "bc":
+                setBeckgroundColor(quizAnswer_a, gray);
+                setBeckgroundColor(quizAnswer_b, red);
+                setBeckgroundColor(quizAnswer_c, green);
+                pointsForQuizTextView.setText(twoPoint);
+                Evaluation.pointCounter = pointCounter + 2;
+                break;
+            case "abc":
+                setBeckgroundColor(quizAnswer_a, gray);
+                setBeckgroundColor(quizAnswer_b, red);
+                setBeckgroundColor(quizAnswer_c, gray);
+                pointsForQuizTextView.setText(onePoint);
+                Evaluation.pointCounter = pointCounter + 1;
+                break;
+            case "":
+                setBeckgroundColor(quizAnswer_a, gray);
+                setBeckgroundColor(quizAnswer_b, 0);
+                setBeckgroundColor(quizAnswer_c, gray);
+                pointsForQuizTextView.setText(zeroPoint);
+                break;
+        }
+    }
+
+    public static void setBeckgroundColor(View quizTextView, int textViewBgColor){
+        quizTextView.setBackgroundColor(textViewBgColor);
     }
 
     public void setAllCheckBoxNonClickable(){

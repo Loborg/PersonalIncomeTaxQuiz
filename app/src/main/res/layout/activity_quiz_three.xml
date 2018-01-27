@@ -99,7 +99,8 @@
                     android:layout_below="@+id/tax_card_image"
                     android:layout_toStartOf="@+id/quiz_three_submite_button"
                     android:layout_marginLeft="@dimen/general_margin_padding"
-                    android:layout_marginTop="@dimen/general_margin_padding"/>
+                    android:layout_marginTop="@dimen/general_margin_padding"
+                    android:hint="@string/q3_edit_text_hint" />
 
                 <Button
                     android:id="@+id/quiz_three_submite_button"
@@ -113,13 +114,31 @@
                     android:layout_marginRight="@dimen/general_margin_padding"
                     android:onClick="quizThreeSubmiteButtonClick"/>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/common_hint_message_for_text_answer"
                     android:layout_below="@id/quiz_03_text_aswer"
-                    android:textSize="10sp"
-                    android:padding="@dimen/general_margin_padding" />
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/general_margin_padding">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/common_hint_message_for_text_answer"
+                        android:textSize="10sp"
+                        android:padding="@dimen/general_margin_padding"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/help_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_help_black_24dp"
+                        android:padding="@dimen/general_margin_padding"
+                        android:layout_weight="5"/>
+                </LinearLayout>
+
+
             </RelativeLayout>
     </RelativeLayout>
     </LinearLayout>

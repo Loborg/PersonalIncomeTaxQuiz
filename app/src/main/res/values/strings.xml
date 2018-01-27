@@ -54,7 +54,7 @@
     <!--Megoldások
     quiz_question_01    b,c
     quiz_question_02    a,b,c
-    quiz_question_03    a,b,c
+    quiz_question_03    tax id
     quiz_question_04    a,b,c
     quiz_question_05    b
     quiz_question_06    a,c
@@ -113,4 +113,5 @@
     <!--Evaluation page texts-->
     <string name="quiz_point_text">Pontszám:</string>
     <string name="final_score_title">Eredmény:</string>
+    <string name="q3_edit_text_hint">* Your answer</string>
 </resources>
