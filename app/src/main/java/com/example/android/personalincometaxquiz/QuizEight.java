@@ -78,7 +78,7 @@ public class QuizEight extends AppCompatActivity {
                 if (isSubmiteButtonClicked) {
                     openQ9Activity();
                 } else {
-                    Toast submiteButtonNotClicked = Toast.makeText(QuizEight.this, "You haven submitted any answers yet", Toast.LENGTH_SHORT);
+                    Toast submiteButtonNotClicked = Toast.makeText(QuizEight.this, R.string.next_no_submite, Toast.LENGTH_SHORT);
                     submiteButtonNotClicked.show();
                 }
             }
@@ -132,25 +132,25 @@ public class QuizEight extends AppCompatActivity {
         nextIconImage.setColorFilter(nextIconImageColor);
 
         if (quizEightCorrectAnswer().equals("a")){
-            Toast answer_a = Toast.makeText(QuizEight.this, "Your answer is incorrect", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizEight.this, R.string.submite_incorrect, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz08Answer_A.setBackgroundColor(Color.RED);
             setAllRadioButtonNonClickable();
             Evaluation.quizAnswers[7] = quizEightCorrectAnswer();
         } else if (quizEightCorrectAnswer().equals("b")){
-            Toast answer_a = Toast.makeText(QuizEight.this, "Your answer is incorrect", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizEight.this, R.string.submite_incorrect, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz08Answer_B.setBackgroundColor(Color.RED);
             setAllRadioButtonNonClickable();
             Evaluation.quizAnswers[7] = quizEightCorrectAnswer();
         } else if (quizEightCorrectAnswer().equals("c")){
-            Toast answer_a = Toast.makeText(QuizEight.this, "Your answer is correct", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizEight.this, R.string.submite_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz08Answer_C.setBackgroundColor(Color.GREEN);
             setAllRadioButtonNonClickable();
             Evaluation.quizAnswers[7] = quizEightCorrectAnswer();
         } else if (quizEightCorrectAnswer().equals("")){
-            Toast answer_a = Toast.makeText(QuizEight.this, "You haven’t choose any of the answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizEight.this, R.string.submite_no_answer, Toast.LENGTH_SHORT);
             answer_a.show();
             setAllRadioButtonNonClickable();
             Evaluation.quizAnswers[7] = quizEightCorrectAnswer();

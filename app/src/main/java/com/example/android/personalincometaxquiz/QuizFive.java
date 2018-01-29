@@ -78,7 +78,7 @@ public class QuizFive extends AppCompatActivity {
                 if (isSubmiteButtonClicked) {
                     openQ6Activity();
                 } else {
-                    Toast submiteButtonNotClicked = Toast.makeText(QuizFive.this, "You haven submitted any answers yet", Toast.LENGTH_SHORT);
+                    Toast submiteButtonNotClicked = Toast.makeText(QuizFive.this, R.string.next_no_submite, Toast.LENGTH_SHORT);
                     submiteButtonNotClicked.show();
                 }
             }
@@ -132,25 +132,25 @@ public class QuizFive extends AppCompatActivity {
         nextIconImage.setColorFilter(nextIconImageColor);
 
         if (quizFiveCorrectAnswer().equals("a")){
-            Toast answer_a = Toast.makeText(QuizFive.this, "Your answer is incorrect", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizFive.this, R.string.submite_incorrect, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz05Answer_A.setBackgroundColor(Color.RED);
             setAllRadioButtonNonClickable();
             Evaluation.quizAnswers[4] = quizFiveCorrectAnswer();
         } else if (quizFiveCorrectAnswer().equals("b")){
-            Toast answer_a = Toast.makeText(QuizFive.this, "Your answer is correct", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizFive.this, R.string.submite_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz05Answer_B.setBackgroundColor(Color.GREEN);
             setAllRadioButtonNonClickable();
             Evaluation.quizAnswers[4] = quizFiveCorrectAnswer();
         } else if (quizFiveCorrectAnswer().equals("c")){
-            Toast answer_a = Toast.makeText(QuizFive.this, "Your answer is incorrect", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizFive.this, R.string.submite_incorrect, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz05Answer_C.setBackgroundColor(Color.RED);
             setAllRadioButtonNonClickable();
             Evaluation.quizAnswers[4] = quizFiveCorrectAnswer();
         } else if (quizFiveCorrectAnswer().equals("")){
-            Toast answer_a = Toast.makeText(QuizFive.this, "You haven’t choose any of the answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizFive.this, R.string.submite_no_answer, Toast.LENGTH_SHORT);
             answer_a.show();
             setAllRadioButtonNonClickable();
             Evaluation.quizAnswers[4] = quizFiveCorrectAnswer();

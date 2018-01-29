@@ -13,6 +13,7 @@ import java.net.URI;
 
 public class Evaluation extends AppCompatActivity {
 
+    public static final String POINT_COUNTER_KEY = "point_counter_key";
     public static int pointCounter = 0;
     public static String userName;
     public static String emailAdress;
@@ -226,8 +227,8 @@ public class Evaluation extends AppCompatActivity {
         );
 
         if (savedInstanceState != null){
-            if (savedInstanceState.containsKey("point_counter_key"))
-                pointCounter = savedInstanceState.getInt("point_counter_key");
+            if (savedInstanceState.containsKey(POINT_COUNTER_KEY))
+                pointCounter = savedInstanceState.getInt(POINT_COUNTER_KEY);
         }
 
         TextView finealScore = findViewById(R.id.final_score);
@@ -237,7 +238,7 @@ public class Evaluation extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt("point_counter_key", pointCounter);
+        outState.putInt(POINT_COUNTER_KEY, pointCounter);
     }
 
     @Override
@@ -249,16 +250,15 @@ public class Evaluation extends AppCompatActivity {
         Intent openEmailApp = new Intent(Intent.ACTION_SENDTO);
         openEmailApp.setType("plain/text");
         openEmailApp.setData(Uri.parse(mailto));
-        openEmailApp.putExtra(Intent.EXTRA_SUBJECT, userName +" here are your evaluation summeries");
+        openEmailApp.putExtra(Intent.EXTRA_SUBJECT, userName + R.string.mail_title);
         openEmailApp.putExtra(Intent.EXTRA_TEXT, "Under Construction");
         startActivity(openEmailApp);
     }
 
     public void restartButtonClick(View v){
-        Intent i = getBaseContext().getPackageManager()
-                .getLaunchIntentForPackage( getBaseContext().getPackageName() );
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(i);
+        Intent restartApp = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        restartApp.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(restartApp);
         System.exit(0);
     }
 }

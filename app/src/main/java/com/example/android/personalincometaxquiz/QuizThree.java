@@ -1,5 +1,6 @@
 package com.example.android.personalincometaxquiz;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -57,7 +58,7 @@ public class QuizThree extends AppCompatActivity {
                 if (isSubmiteButtonClicked) {
                     openQ4Activity();
                 } else {
-                    Toast submiteButtonNotClicked = Toast.makeText(QuizThree.this, "You haven submitted the right answers yet", Toast.LENGTH_SHORT);
+                    Toast submiteButtonNotClicked = Toast.makeText(QuizThree.this, R.string.next_no_submite, Toast.LENGTH_SHORT);
                     submiteButtonNotClicked.show();
                 }
             }
@@ -103,18 +104,18 @@ public class QuizThree extends AppCompatActivity {
         Evaluation.quizAnswers[2] = quiz03AswerText;
 
         if (quiz03AswerText.equalsIgnoreCase("tax id")){
-            Toast.makeText(this, "Your answer is correct!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.submite_correct, Toast.LENGTH_SHORT).show();
             isSubmiteButtonClicked = true;
             editTextBGColor = Color.GREEN;
             quiz03TextAnswer.setBackgroundColor(editTextBGColor);
             quiz03TextAnswer.setEnabled(false);
         } else if (!quiz03AswerText.equalsIgnoreCase("tax id") && submiteButtonClickCounter < 2){
-            Toast.makeText(this, "Your answer is incorrect, try again!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.sumbite_wrong_new_trie, Toast.LENGTH_SHORT).show();
             editTextBGColor = Color.RED;
             quiz03TextAnswer.setBackgroundColor(editTextBGColor);
             submiteButtonClickCounter = submiteButtonClickCounter + 1;
         } else if (submiteButtonClickCounter > 1){
-            Toast.makeText(this, "You tried to anwers the question to meny times!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.submite_too_many, Toast.LENGTH_SHORT).show();
             isSubmiteButtonClicked = true;
             quiz03TextAnswer.setEnabled(false);
         }
@@ -137,7 +138,7 @@ public class QuizThree extends AppCompatActivity {
                 Evaluation.pointCounter = pointCounter + 3;
                 break;
             case "":
-                textAnswer.setText("tax id");
+                textAnswer.setText(R.string.quiz_03_answer_b);
                 setBeckgroundColor(textAnswer, gray);
                 pointsForQuizTextView.setText(zeroPoint);
                 break;
@@ -167,5 +168,10 @@ public class QuizThree extends AppCompatActivity {
     public void saveViewStatus(){
         editTextText = quiz03TextAnswer.getText().toString();
         editTextIsEnabled = quiz03TextAnswer.isEnabled();
+    }
+
+    public void informationButtonClick(View v){
+        QuizThreeInformationDialog infoDialog = new QuizThreeInformationDialog();
+        infoDialog.show(getSupportFragmentManager(), "dialog");
     }
 }

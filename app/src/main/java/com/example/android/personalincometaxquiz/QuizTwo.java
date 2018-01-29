@@ -78,7 +78,7 @@ public class QuizTwo extends AppCompatActivity {
                 if (isSubmiteButtonClicked) {
                     openQ3Activity();
                 } else {
-                    Toast submiteButtonNotClicked = Toast.makeText(QuizTwo.this, "You haven submitted any answers yet", Toast.LENGTH_SHORT);
+                    Toast submiteButtonNotClicked = Toast.makeText(QuizTwo.this, R.string.next_no_submite, Toast.LENGTH_SHORT);
                     submiteButtonNotClicked.show();
                 }
             }
@@ -132,46 +132,46 @@ public class QuizTwo extends AppCompatActivity {
         nextIconImage.setColorFilter(nextIconImageColor);
 
         if (quizTwoAnswerVariation().equals("a")){
-            Toast answer_a = Toast.makeText(QuizTwo.this, "There is three correct answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTwo.this, R.string.submite_three_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz02Answer_A.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         } else if (quizTwoAnswerVariation().equals("b")){
-            Toast answer_a = Toast.makeText(QuizTwo.this, "There is three correct answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTwo.this, R.string.submite_three_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz02Answer_B.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         } else if (quizTwoAnswerVariation().equals("c")){
-            Toast answer_a = Toast.makeText(QuizTwo.this, "There is three correct answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTwo.this, R.string.submite_three_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz02Answer_C.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         } else if (quizTwoAnswerVariation().equals("ab")){
-            Toast answer_a = Toast.makeText(QuizTwo.this, "There is three correct answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTwo.this, R.string.submite_three_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz02Answer_A.setBackgroundColor(Color.GREEN);
             quiz02Answer_B.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         } else if (quizTwoAnswerVariation().equals("ac")){
-            Toast answer_a = Toast.makeText(QuizTwo.this, "There is three correct answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTwo.this, R.string.submite_three_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz02Answer_A.setBackgroundColor(Color.GREEN);
             quiz02Answer_C.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         } else if (quizTwoAnswerVariation().equals("bc")){
-            Toast answer_a = Toast.makeText(QuizTwo.this, "There is three correct answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTwo.this, R.string.submite_three_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz02Answer_B.setBackgroundColor(Color.GREEN);
             quiz02Answer_C.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         } else if (quizTwoAnswerVariation().equals("abc")){
-            Toast answer_a = Toast.makeText(QuizTwo.this, "All of your answers are correct", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTwo.this, R.string.submite_all_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             setAllCheckBoxNonClickable();
             quiz02Answer_A.setBackgroundColor(Color.GREEN);
@@ -179,7 +179,7 @@ public class QuizTwo extends AppCompatActivity {
             quiz02Answer_C.setBackgroundColor(Color.GREEN);
             Evaluation.quizAnswers[1] = quizTwoAnswerVariation();
         } else if (quizTwoAnswerVariation().equals("")){
-            Toast answer_a = Toast.makeText(QuizTwo.this, "You haven’t choose any of the answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTwo.this, R.string.submite_no_answer, Toast.LENGTH_SHORT);
             answer_a.show();
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[1] = quizTwoAnswerVariation();

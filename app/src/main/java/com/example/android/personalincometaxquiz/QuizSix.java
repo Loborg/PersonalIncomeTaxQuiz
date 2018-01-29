@@ -78,7 +78,7 @@ public class QuizSix extends AppCompatActivity {
                 if (isSubmiteButtonClicked) {
                     openQ7Activity();
                 } else {
-                    Toast submiteButtonNotClicked = Toast.makeText(QuizSix.this, "You haven submitted any answers yet", Toast.LENGTH_SHORT);
+                    Toast submiteButtonNotClicked = Toast.makeText(QuizSix.this, R.string.next_no_submite, Toast.LENGTH_SHORT);
                     submiteButtonNotClicked.show();
                 }
             }
@@ -132,51 +132,51 @@ public class QuizSix extends AppCompatActivity {
         nextIconImage.setColorFilter(nextIconImageColor);
 
         if (quizSixAnswerVariation().equals("a")){
-            Toast answer_a = Toast.makeText(QuizSix.this, "There is one more correct answer", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizSix.this, R.string.submite_one_more_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz06Answer_A.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[5] = quizSixAnswerVariation();
         } else if (quizSixAnswerVariation().equals("b")){
-            Toast answer_a = Toast.makeText(QuizSix.this, "Your answer is incorrect", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizSix.this, R.string.submite_incorrect, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz06Answer_B.setBackgroundColor(Color.RED);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[5] = quizSixAnswerVariation();
         } else if (quizSixAnswerVariation().equals("c")){
-            Toast answer_a = Toast.makeText(QuizSix.this, "There is one more correct answer", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizSix.this, R.string.submite_one_more_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz06Answer_C.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[5] = quizSixAnswerVariation();
         } else if (quizSixAnswerVariation().equals("ab")){
-            Toast answer_a = Toast.makeText(QuizSix.this, "Only one of your answers is correct", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizSix.this, R.string.submite_only_one_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz06Answer_A.setBackgroundColor(Color.GREEN);
             quiz06Answer_B.setBackgroundColor(Color.RED);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[5] = quizSixAnswerVariation();
         } else if (quizSixAnswerVariation().equals("ac")){
-            Toast answer_a = Toast.makeText(QuizSix.this, "All of your answers are correct", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizSix.this, R.string.submite_all_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz06Answer_A.setBackgroundColor(Color.GREEN);
             quiz06Answer_C.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[5] = quizSixAnswerVariation();
         } else if (quizSixAnswerVariation().equals("bc")){
-            Toast answer_a = Toast.makeText(QuizSix.this, "Only one of your answers is correct", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizSix.this, R.string.submite_only_one_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz06Answer_B.setBackgroundColor(Color.RED);
             quiz06Answer_C.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[5] = quizSixAnswerVariation();
         } else if (quizSixAnswerVariation().equals("abc")){
-            Toast answer_a = Toast.makeText(QuizSix.this, "Only two of the answers are correct", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizSix.this, R.string.submite_only_two, Toast.LENGTH_SHORT);
             answer_a.show();
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[5] = quizSixAnswerVariation();
         } else if (quizSixAnswerVariation().equals("")){
-            Toast answer_a = Toast.makeText(QuizSix.this, "You haven’t choose any of the answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizSix.this, R.string.submite_no_answer, Toast.LENGTH_SHORT);
             answer_a.show();
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[5] = quizSixAnswerVariation();

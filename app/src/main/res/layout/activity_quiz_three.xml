@@ -91,33 +91,11 @@
                     android:layout_centerHorizontal="true"
                     android:src="@drawable/tax_card_edited" />
 
-                <EditText
-                    android:id="@+id/quiz_03_text_aswer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/tax_card_image"
-                    android:layout_toStartOf="@+id/quiz_three_submite_button"
-                    android:layout_marginLeft="@dimen/general_margin_padding"
-                    android:layout_marginTop="@dimen/general_margin_padding"
-                    android:hint="@string/q3_edit_text_hint" />
-
-                <Button
-                    android:id="@+id/quiz_three_submite_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tax_card_image"
-                    android:layout_alignParentRight="true"
-                    android:text="@string/submite_button_text"
-                    android:textSize="10sp"
-                    android:layout_marginTop="@dimen/general_margin_padding"
-                    android:layout_marginRight="@dimen/general_margin_padding"
-                    android:onClick="quizThreeSubmiteButtonClick"/>
-
                 <LinearLayout
+                    android:id="@+id/help_countainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/quiz_03_text_aswer"
+                    android:layout_below="@id/tax_card_image"
                     android:orientation="horizontal"
                     android:layout_marginTop="@dimen/general_margin_padding">
 
@@ -135,9 +113,32 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_help_black_24dp"
                         android:padding="@dimen/general_margin_padding"
-                        android:layout_weight="5"/>
+                        android:layout_weight="5"
+                        android:onClick="informationButtonClick"/>
                 </LinearLayout>
 
+                <EditText
+                    android:id="@+id/quiz_03_text_aswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/help_countainer"
+                    android:layout_toStartOf="@+id/quiz_three_submite_button"
+                    android:layout_marginLeft="@dimen/general_margin_padding"
+                    android:layout_marginTop="@dimen/general_margin_padding"
+                    android:hint="@string/q3_edit_text_hint" />
+
+                <Button
+                    android:id="@+id/quiz_three_submite_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/help_countainer"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/submite_button_text"
+                    android:textSize="10sp"
+                    android:layout_marginTop="@dimen/general_margin_padding"
+                    android:layout_marginRight="@dimen/general_margin_padding"
+                    android:onClick="quizThreeSubmiteButtonClick"/>
 
             </RelativeLayout>
     </RelativeLayout>

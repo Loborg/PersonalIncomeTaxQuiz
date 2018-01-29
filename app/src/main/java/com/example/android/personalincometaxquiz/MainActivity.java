@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
             sendDataToEvaluation();
             openQuizOneActivity();
         } else {
-            Toast emptiTextFieldWarning = Toast.makeText(this, "You didn’t fill out all the required fields!", Toast.LENGTH_SHORT);
+            Toast emptiTextFieldWarning = Toast.makeText(this, R.string.submite_no_text, Toast.LENGTH_SHORT);
             emptiTextFieldWarning.show();
         }
     }

@@ -111,46 +111,46 @@ public class QuizTen extends AppCompatActivity {
         isSubmiteButtonClicked = true;
 
         if (quizTenAnswerVariation().equals("a")){
-            Toast answer_a = Toast.makeText(QuizTen.this, "There is three correct answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTen.this, R.string.submite_three_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz10Answer_A.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[9] = quizTenAnswerVariation();
         } else if (quizTenAnswerVariation().equals("b")){
-            Toast answer_a = Toast.makeText(QuizTen.this, "There is three correct answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTen.this, R.string.submite_three_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz10Answer_B.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[9] = quizTenAnswerVariation();
         } else if (quizTenAnswerVariation().equals("c")){
-            Toast answer_a = Toast.makeText(QuizTen.this, "There is three correct answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTen.this, R.string.submite_three_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz10Answer_C.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[9] = quizTenAnswerVariation();
         } else if (quizTenAnswerVariation().equals("ab")){
-            Toast answer_a = Toast.makeText(QuizTen.this, "There is three correct answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTen.this, R.string.submite_three_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz10Answer_A.setBackgroundColor(Color.GREEN);
             quiz10Answer_B.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[9] = quizTenAnswerVariation();
         } else if (quizTenAnswerVariation().equals("ac")){
-            Toast answer_a = Toast.makeText(QuizTen.this, "There is three correct answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTen.this, R.string.submite_three_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz10Answer_A.setBackgroundColor(Color.GREEN);
             quiz10Answer_C.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[9] = quizTenAnswerVariation();
         } else if (quizTenAnswerVariation().equals("bc")){
-            Toast answer_a = Toast.makeText(QuizTen.this, "There is three correct answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTen.this, R.string.submite_three_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             quiz10Answer_B.setBackgroundColor(Color.GREEN);
             quiz10Answer_C.setBackgroundColor(Color.GREEN);
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[9] = quizTenAnswerVariation();
         } else if (quizTenAnswerVariation().equals("abc")){
-            Toast answer_a = Toast.makeText(QuizTen.this, "All of your answers are correct", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTen.this, R.string.submite_all_correct, Toast.LENGTH_SHORT);
             answer_a.show();
             setAllCheckBoxNonClickable();
             quiz10Answer_A.setBackgroundColor(Color.GREEN);
@@ -158,7 +158,7 @@ public class QuizTen extends AppCompatActivity {
             quiz10Answer_C.setBackgroundColor(Color.GREEN);
             Evaluation.quizAnswers[9] = quizTenAnswerVariation();
         } else if (quizTenAnswerVariation().equals("")){
-            Toast answer_a = Toast.makeText(QuizTen.this, "You haven’t choose any of the answers", Toast.LENGTH_SHORT);
+            Toast answer_a = Toast.makeText(QuizTen.this, R.string.submite_no_answer, Toast.LENGTH_SHORT);
             answer_a.show();
             setAllCheckBoxNonClickable();
             Evaluation.quizAnswers[9] = quizTenAnswerVariation();
