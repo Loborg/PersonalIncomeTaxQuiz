@@ -40,6 +40,7 @@ public class QuizOne extends AppCompatActivity {
     private static int quiz01Answer_b_bg_color;
     private static int quiz01Answer_c_bg_color;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -189,6 +190,25 @@ public class QuizOne extends AppCompatActivity {
         }
     }
 
+    public String quizOneAnswerVariation(){
+        if (quiz01Answer_A.isChecked() && !quiz01Answer_B.isChecked() && !quiz01Answer_C.isChecked()){
+            return "a"; //Your answer is incorrect //0 point
+        } else if (quiz01Answer_B.isChecked() && !quiz01Answer_A.isChecked() && !quiz01Answer_C.isChecked()){
+            return "b"; //There is one more correct answer //2 point
+        } else if (quiz01Answer_C.isChecked() && !quiz01Answer_A.isChecked() && !quiz01Answer_B.isChecked()){
+            return "c"; //There is one more correct answer //2 point
+        } else if (quiz01Answer_A.isChecked() && quiz01Answer_B.isChecked() && !quiz01Answer_C.isChecked()){
+            return "ab"; //Only one of your answers is correct //2 point
+        } else if (quiz01Answer_A.isChecked() && quiz01Answer_C.isChecked() && !quiz01Answer_B.isChecked()){
+            return "ac"; //Only one of your answers is correct //2 point
+        } else if (quiz01Answer_B.isChecked() && quiz01Answer_C.isChecked() && !quiz01Answer_A.isChecked()){
+            return "bc"; //All of your answers are correct //3 point
+        } else if (quiz01Answer_A.isChecked() && quiz01Answer_B.isChecked() && quiz01Answer_C.isChecked()){
+            return "abc"; //Only two of the answers are correct //1 point
+        }
+        return ""; //You haven’t choose any of the answers //0 point
+    }
+
     public static void evaluateQuizOne(String[] quizAnswers,
                                        TextView pointsForQuizTextView,
                                        TextView quizAnswer_a,
@@ -202,6 +222,7 @@ public class QuizOne extends AppCompatActivity {
                                        String twoPoint,
                                        String threePoint)
     {
+
         switch (quizAnswers[0]) {
             case "a":
                 setBeckgroundColor(quizAnswer_a, red);
@@ -262,25 +283,6 @@ public class QuizOne extends AppCompatActivity {
 
     public static void setBeckgroundColor(View quizTextView, int textViewBgColor){
         quizTextView.setBackgroundColor(textViewBgColor);
-    }
-
-    public String quizOneAnswerVariation(){
-        if (quiz01Answer_A.isChecked() && !quiz01Answer_B.isChecked() && !quiz01Answer_C.isChecked()){
-            return "a"; //Your answer is incorrect //0 point
-        } else if (quiz01Answer_B.isChecked() && !quiz01Answer_A.isChecked() && !quiz01Answer_C.isChecked()){
-            return "b"; //There is one more correct answer //2 point
-        } else if (quiz01Answer_C.isChecked() && !quiz01Answer_A.isChecked() && !quiz01Answer_B.isChecked()){
-            return "c"; //There is one more correct answer //2 point
-        } else if (quiz01Answer_A.isChecked() && quiz01Answer_B.isChecked() && !quiz01Answer_C.isChecked()){
-            return "ab"; //Only one of your answers is correct //2 point
-        } else if (quiz01Answer_A.isChecked() && quiz01Answer_C.isChecked() && !quiz01Answer_B.isChecked()){
-            return "ac"; //Only one of your answers is correct //2 point
-        } else if (quiz01Answer_B.isChecked() && quiz01Answer_C.isChecked() && !quiz01Answer_A.isChecked()){
-            return "bc"; //All of your answers are correct //3 point
-        } else if (quiz01Answer_A.isChecked() && quiz01Answer_B.isChecked() && quiz01Answer_C.isChecked()){
-            return "abc"; //Only two of the answers are correct //1 point
-        }
-        return ""; //You haven’t choose any of the answers //0 point
     }
 
     public void setAllCheckBoxNonClickable(){

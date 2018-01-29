@@ -5,4 +5,5 @@
     <dimen name="evaluation_number_paddig">5dp</dimen>
     <dimen name="evaluation_title_text_size">18sp</dimen>
     <dimen name="separator_views_height">1dp</dimen>
+    <dimen name="question_text_size">20sp</dimen>
 </resources>

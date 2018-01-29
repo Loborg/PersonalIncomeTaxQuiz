@@ -30,12 +30,34 @@ public class Evaluation extends AppCompatActivity {
     TextView[] quizAnswer_b = new TextView[10];
     TextView[] quizAnswer_c = new TextView[10];
     TextView quizTextAnswer;
+    public String evaluationMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_evaluation);
         quizTextAnswer = findViewById(R.id.q3_text_answer);
+        evaluationMessage = getResources().getString(R.string.evaluate_message_start_string) + "\n\n"
+                + getResources().getString(R.string.quiz_question_01) + "\n"
+                + quizAnswers[0] + "\n\n"
+                + getResources().getString(R.string.quiz_question_02) + "\n"
+                + quizAnswers[1] + "\n\n"
+                + getResources().getString(R.string.quiz_question_03) + "\n"
+                + quizAnswers[2] + "\n\n"
+                + getResources().getString(R.string.quiz_question_04) + "\n"
+                + quizAnswers[3] + "\n\n"
+                + getResources().getString(R.string.quiz_question_05) + "\n"
+                + quizAnswers[4] + "\n\n"
+                + getResources().getString(R.string.quiz_question_06) + "\n"
+                + quizAnswers[5] + "\n\n"
+                + getResources().getString(R.string.quiz_question_07) + "\n"
+                + quizAnswers[6] + "\n\n"
+                + getResources().getString(R.string.quiz_question_08) + "\n"
+                + quizAnswers[7] + "\n\n"
+                + getResources().getString(R.string.quiz_question_09) + "\n"
+                + quizAnswers[8] + "\n\n"
+                + getResources().getString(R.string.quiz_question_10) + "\n"
+                + quizAnswers[9] + "\n\n";
 
         pointsForQuiz[0] = findViewById(R.id.points_for_quiz01);
         pointsForQuiz[1] = findViewById(R.id.points_for_quiz02);
@@ -246,12 +268,13 @@ public class Evaluation extends AppCompatActivity {
     }
 
     public void sendButtonClick(View v){
+        String title = getText(R.string.mail_title).toString();
         String mailto = "mailto:" + emailAdress;
         Intent openEmailApp = new Intent(Intent.ACTION_SENDTO);
         openEmailApp.setType("plain/text");
         openEmailApp.setData(Uri.parse(mailto));
-        openEmailApp.putExtra(Intent.EXTRA_SUBJECT, userName + R.string.mail_title);
-        openEmailApp.putExtra(Intent.EXTRA_TEXT, "Under Construction");
+        openEmailApp.putExtra(Intent.EXTRA_SUBJECT, userName + title);
+        openEmailApp.putExtra(Intent.EXTRA_TEXT, evaluationMessage);
         startActivity(openEmailApp);
     }
 

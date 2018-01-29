@@ -77,7 +77,7 @@
     <string name="send_button">Küldés</string>
     <string name="quiz_point_text">Pontszám:</string>
     <string name="final_score_title">Eredmény:</string>
-    <string name="q3_edit_text_hint">* A válaszod</string>
+    <string name="q3_edit_text_hint">A válaszod *</string>
     <string name="main_prompt_text">A kezdéshez add meg a neved és az email címed!</string>
     <string name="main_page_textfield_01_hint">Név *</string>
     <string name="main_page_textfield_02_hint">Email cím *</string>
@@ -92,6 +92,7 @@
         \nA válasz csak angol nyelven fogadható el.
         \n
         \nRossz válasz esetén kétszer újra próbálkozhatsz.</string>
+    <string name="evaluate_message_start_string">Az eredményed:</string>
 
     <!--Toast Messages-->
     <string name="submite_no_text">Nem töltötted ki a kötelező mezőket!</string>
