@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">Personal Tncome Tax Quiz</string>
+
+    <string name="quiz_question_01">Not tax relief</string>
+    <string name="quiz_01_answer_a">the 5% of the monthly gross minimal wage / mounth, when a person is severely handicapped,</string>
+    <string name="quiz_01_answer_b">the 50% of the payment for the voluntary pension fund</string>
+    <string name="quiz_01_answer_c">the 20% of the mutual pay for the insurance company, at most 150.000 Ft</string>
+
+    <string name="quiz_question_02">Based on the long last investment contract</string>
+    <string name="quiz_02_answer_a">The tax is 15%, if the immobilization will be cancel before the end of the three-year immobilization period.</string>
+    <string name="quiz_02_answer_b">The tax is 0%,  at the end of the five-year immobilization period,</string>
+    <string name="quiz_02_answer_c">The tax is 10%, at the end of the three-year immobilization period</string>
+
+    <string name="quiz_question_03">What is the name of the number in the red framed field?</string>
+    <string name="quiz_03_answer_a">Tax number</string>
+    <string name="quiz_03_answer_b">Tax id</string>
+    <string name="quiz_03_answer_c">Identity number</string>
+
+    <string name="quiz_question_04">Not tax reducer</string>
+    <string name="quiz_04_answer_a">the 20% of the investment, which is used as a tax credit, at most 200.000 Ft,</string>
+    <string name="quiz_04_answer_b">the 30% of the amount, which is used to buy the cooperative business share, at the member,</string>
+    <string name="quiz_04_answer_c">the 20% of the paid in local tax</string>
+
+    <string name="quiz_question_05">The tax debts</string>
+    <string name="quiz_05_answer_a">is the 16% of the wage and sum of the tax base supplement calculated from the wage,</string>
+    <string name="quiz_05_answer_b">is closed since 01 January 2012.</string>
+    <string name="quiz_05_answer_c">can be enforced fully if the income is less than 2.750.000 Ft</string>
+
+    <string name="quiz_question_06">The rate of flat-rate tax</string>
+    <string name="quiz_06_answer_a" formatted="false">is  the 15% of the income\'s 13%, only in case of retailer activity,</string>
+    <string name="quiz_06_answer_b" formatted="false">is the 30% of the income’s 15%, in case of specific retail activity,</string>
+    <string name="quiz_06_answer_c" formatted="false">is the 15% of the private entrepreneur income’s 20%, in case of specific activity.</string>
+
+    <string name="quiz_question_07">You have to pay the flat-rate tax withholding</string>
+    <string name="quiz_07_answer_a">monthly, after the financial month, until the 10th of the next month,</string>
+    <string name="quiz_07_answer_b">monthly, after the financial month, until the 20th of the next month,</string>
+    <string name="quiz_07_answer_c">quarterly, after the accounting period, until the 12th of the next month.</string>
+
+    <string name="quiz_question_08">After 2013 ___ can be placed in to the stabile investment contract’s deposit register.</string>
+    <string name="quiz_08_answer_a">the securities that is released in a closed group</string>
+    <string name="quiz_08_answer_b">the inland real estate</string>
+    <string name="quiz_08_answer_c">the public securities that has been released under the effect of the Hungarian personal income tax low’s 67/A. § (3)</string>
+
+    <string name="quiz_question_09">When thy calculating the capital gain, the amount for the acquisition</string>
+    <string name="quiz_09_answer_a">is the value certified by the tax office,</string>
+    <string name="quiz_09_answer_b">is the valid stock average price at purchase,</string>
+    <string name="quiz_09_answer_c">is the profit from the securities-loan.</string>
+
+    <string name="quiz_question_10">It pays 15% tax</string>
+    <string name="quiz_10_answer_a">the profit from the stock exchange transaction,</string>
+    <string name="quiz_10_answer_b">the price profit,</string>
+    <string name="quiz_10_answer_c">the profit from the securities-loan.</string>
+
+    <!--Page titles-->
+    <string name="main_title">Mainpage</string>
+    <string name="quiz_title_01">First Question</string>
+    <string name="quiz_title_02">Second Question</string>
+    <string name="quiz_title_03">Third Question</string>
+    <string name="quiz_title_04">Fourth Question</string>
+    <string name="quiz_title_05">Fifth Question</string>
+    <string name="quiz_title_06">Sixth Question</string>
+    <string name="quiz_title_07">Seventh Question</string>
+    <string name="quiz_title_08">Eighth Question</string>
+    <string name="quiz_title_09">Ninth Question</string>
+    <string name="quiz_title_10">Tenth Question</string>
+    <string name="evaluation_title">Evaluate</string>
+
+    <!--Common hint message-->
+    <string name="common_hint_message">* You can check multiple correct answers.</string>
+    <string name="common_hint_message_for_text_answer">* You have to give a textual answer, for further information you can click on the question mark.</string>
+
+    <!--Other texts-->
+    <string name="submite_button_text">Submit</string>
+    <string name="evaluation_button">Evaluation</string>
+    <string name="restart_button_text">Restart</string>
+    <string name="send_button">Send</string>
+    <string name="quiz_point_text">Score:</string>
+    <string name="final_score_title">Final score:</string>
+    <string name="q3_edit_text_hint">Your answer *</string>
+    <string name="main_prompt_text">For the beginning please write your name and email address!</string>
+    <string name="main_page_textfield_01_hint">Name *</string>
+    <string name="main_page_textfield_02_hint">Email address *</string>
+    <string name="main_page_explanation">* The starred fields are required!</string>
+    <string name="mail_title">\t quiz evaluation summary.</string>
+    <string name="quiz_3_dialog_message">You have to write your answer accurately, for example:
+        \n
+        \nTax number
+        \nTax id
+        \nIdentity number
+        \n
+        \nWe can accept your answer in English only.
+        \n
+        \nIn case of an incorrect answer, you can try again twice.</string>
+    <string name="evaluate_message_start_string">Your final score:</string>
+
+    <!--Toast Messages-->
+    <string name="submite_no_text">You have not filled the required field!</string>
+    <string name="submite_incorrect">The answer is incorrect</string>
+    <string name="submite_correct">The answer is incorrect!</string>
+    <string name="submite_only_one_correct">Only one of your answers are correct!</string>
+    <string name="submite_one_more_correct">There is one more correct answer!</string>
+    <string name="submite_all_correct">All of your answers are correct!</string>
+    <string name="submite_only_two">There are only two correct answers!</string>
+    <string name="submite_no_answer">You did not checked any of answers!</string>
+    <string name="submite_three_correct">There are three correct answers!</string>
+    <string name="sumbite_wrong_new_trie">Your answer is incorrect, try again!</string>
+    <string name="submite_too_many">You tried too many times!</string>
+    <string name="next_no_submite">You have not submitted any answers jet!</string>
+    <string name="dialog_positive_button">OK</string>
+
+</resources>

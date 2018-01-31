@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context="com.example.android.personalincometaxquiz.QuizThree">
 
     <LinearLayout
@@ -12,75 +11,73 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="6"
-        android:background="@color/title_background_color">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center">
+            android:background="@color/title_background_color"
+            android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/back_image_01"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:tint="@android:color/black"
-                app:srcCompat="@drawable/ic_navigate_before_black_48dp"
-                android:onClick="beckIconClick"/>
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/back_image_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:onClick="beckIconClick"
+                    android:tint="@android:color/black"
+                    app:srcCompat="@drawable/ic_navigate_before_black_48dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/main_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/agency_fb"
+                    android:gravity="center"
+                    android:text="@string/quiz_title_03"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/title_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/next_image_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_navigate_next_black_48dp" />
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/main_title"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:id="@+id/prompt_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/general_margin_padding"
                 android:gravity="center"
-                android:text="@string/quiz_title_03"
+                android:text="@string/quiz_question_03"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/title_size"
-                android:fontFamily="@font/agency_fb"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center">
-
-            <ImageView
-                android:id="@+id/next_image_01"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_navigate_next_black_48dp" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1">
-
-        <TextView
-            android:id="@+id/prompt_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/quiz_question_03"
-            android:textColor="@android:color/black"
-            android:layout_margin="@dimen/general_margin_padding"
-            android:textSize="@dimen/question_text_size"
-            android:textStyle="bold"/>
+                android:textSize="@dimen/question_text_size"
+                android:textStyle="bold" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -93,33 +90,33 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/tax_card_edited"
-                    android:layout_marginTop="@dimen/general_margin_padding"/>
+                    android:layout_marginTop="@dimen/general_margin_padding"
+                    android:src="@drawable/tax_card_edited" />
 
                 <LinearLayout
                     android:id="@+id/help_countainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tax_card_image"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="@dimen/general_margin_padding">
+                    android:layout_marginTop="@dimen/general_margin_padding"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/common_hint_message_for_text_answer"
-                        android:textSize="10sp"
+                        android:layout_weight="1"
                         android:padding="@dimen/general_margin_padding"
-                        android:layout_weight="1"/>
+                        android:text="@string/common_hint_message_for_text_answer"
+                        android:textSize="10sp" />
 
                     <ImageView
                         android:id="@+id/help_icon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_help_black_24dp"
-                        android:padding="@dimen/general_margin_padding"
                         android:layout_weight="5"
-                        android:onClick="informationButtonClick"/>
+                        android:onClick="informationButtonClick"
+                        android:padding="@dimen/general_margin_padding"
+                        android:src="@drawable/ic_help_black_24dp" />
                 </LinearLayout>
 
                 <EditText
@@ -128,24 +125,23 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/help_countainer"
-                    android:layout_toStartOf="@+id/quiz_three_submite_button"
                     android:layout_marginLeft="@dimen/general_margin_padding"
                     android:layout_marginTop="@dimen/general_margin_padding"
+                    android:layout_toStartOf="@+id/quiz_three_submite_button"
                     android:hint="@string/q3_edit_text_hint" />
 
                 <Button
                     android:id="@+id/quiz_three_submite_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/help_countainer"
                     android:layout_alignParentRight="true"
-                    android:text="@string/submite_button_text"
-                    android:textSize="10sp"
-                    android:layout_marginTop="@dimen/general_margin_padding"
+                    android:layout_below="@+id/help_countainer"
                     android:layout_marginRight="@dimen/general_margin_padding"
-                    android:onClick="quizThreeSubmiteButtonClick"/>
-
+                    android:layout_marginTop="@dimen/general_margin_padding"
+                    android:onClick="quizThreeSubmiteButtonClick"
+                    android:text="@string/submite_button_text"
+                    android:textSize="10sp" />
             </RelativeLayout>
-    </RelativeLayout>
+        </RelativeLayout>
     </LinearLayout>
- </ScrollView>
+</ScrollView>

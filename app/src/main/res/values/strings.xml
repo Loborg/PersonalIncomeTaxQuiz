@@ -93,6 +93,7 @@
         \n
         \nRossz válasz esetén kétszer újra próbálkozhatsz.</string>
     <string name="evaluate_message_start_string">Az eredményed:</string>
+    <string name="dialog_positive_button">OK</string>
 
     <!--Toast Messages-->
     <string name="submite_no_text">Nem töltötted ki a kötelező mezőket!</string>

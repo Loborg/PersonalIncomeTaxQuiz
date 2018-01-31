@@ -38,11 +38,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="@font/agency_fb"
                     android:gravity="center"
                     android:text="@string/main_title"
-                    android:textColor="@android:color/black"
                     android:textSize="@dimen/title_size"
-                    android:fontFamily="@font/agency_fb"/>
+                    android:textColor="@color/title_color"/>
             </LinearLayout>
 
             <LinearLayout

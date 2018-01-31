@@ -13,7 +13,7 @@ public class QuizThreeInformationDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setMessage(R.string.quiz_3_dialog_message)
-                .setPositiveButton(R.string.submite_button_text, new DialogInterface.OnClickListener() {
+                .setPositiveButton(R.string.dialog_positive_button, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                     }
