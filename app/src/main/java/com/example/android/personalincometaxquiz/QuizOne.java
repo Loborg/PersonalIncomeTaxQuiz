@@ -52,6 +52,7 @@ public class QuizOne extends AppCompatActivity {
         quiz01Answer_C = findViewById(R.id.quiz_01_answer_c);
         quizOneSubmiteButton = findViewById(R.id.quiz_one_submite_button);
 
+        //Reloads the View states on startup and after rotation if the savedInstanceState method is not empty
         if (savedInstanceState != null){
             if (savedInstanceState.containsKey(QUIZ_01_ANSWER_A_CLICKABLE_KEY))
                 quiz01Answer_A.setClickable(savedInstanceState.getBoolean(QUIZ_01_ANSWER_A_CLICKABLE_KEY));
@@ -76,6 +77,7 @@ public class QuizOne extends AppCompatActivity {
 
         nextIconImage.setColorFilter(nextIconImageColor);
 
+        //Handles the next ImageView click based on the Submite button clicks.
         nextIconImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,6 +109,7 @@ public class QuizOne extends AppCompatActivity {
         saveViewStatus();
     }
 
+    //Re buld the the variables of the quiz when returned from a nother Activity
     @Override
     protected void onResume() {
         super.onResume();
@@ -125,14 +128,21 @@ public class QuizOne extends AppCompatActivity {
         nextIconImage.setColorFilter(nextIconImageColor);
     }
 
+    //Prevents the phons back button press
     @Override
     public void onBackPressed() {
     }
 
+    //Handles the back ImageView clicks
     public void beckIconClick(View v){
         openMainActivity();
     }
 
+    /**Handles the Submit button click
+    * Displays the result as a Toast message,
+    * Sets the background colour of the questions
+    * Sets the quiz non clickable after answer is given
+     * Determens fi an answer is correct or not*/
     public void quizOneSubmiteButtonClick(View v){
         isSubmiteButtonClicked = true;
         nextIconImageColor = Color.BLACK;
@@ -190,6 +200,7 @@ public class QuizOne extends AppCompatActivity {
         }
     }
 
+    //Returns the string witch is representing the given answers
     public String quizOneAnswerVariation(){
         if (quiz01Answer_A.isChecked() && !quiz01Answer_B.isChecked() && !quiz01Answer_C.isChecked()){
             return "a"; //Your answer is incorrect //0 point
@@ -209,6 +220,7 @@ public class QuizOne extends AppCompatActivity {
         return ""; //You haven’t choose any of the answers //0 point
     }
 
+    //Sets the evaluation page's data based on the answers qiven on this page
     public static void evaluateQuizOne(String[] quizAnswers,
                                        TextView pointsForQuizTextView,
                                        TextView quizAnswer_a,
