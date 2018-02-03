@@ -128,7 +128,7 @@ public class QuizOne extends AppCompatActivity {
         nextIconImage.setColorFilter(nextIconImageColor);
     }
 
-    //Prevents the phons back button press
+    //Prevents the device back button press
     @Override
     public void onBackPressed() {
     }
@@ -142,7 +142,7 @@ public class QuizOne extends AppCompatActivity {
     * Displays the result as a Toast message,
     * Sets the background colour of the questions
     * Sets the quiz non clickable after answer is given
-     * Determens fi an answer is correct or not*/
+     * Deferments if an answer is correct or not*/
     public void quizOneSubmiteButtonClick(View v){
         isSubmiteButtonClicked = true;
         nextIconImageColor = Color.BLACK;
@@ -220,7 +220,7 @@ public class QuizOne extends AppCompatActivity {
         return ""; //You haven’t choose any of the answers //0 point
     }
 
-    //Sets the evaluation page's data based on the answers qiven on this page
+    //Sets the evaluation page's data based on the answers given on this page
     public static void evaluateQuizOne(String[] quizAnswers,
                                        TextView pointsForQuizTextView,
                                        TextView quizAnswer_a,
@@ -303,6 +303,7 @@ public class QuizOne extends AppCompatActivity {
         quiz01Answer_C.setClickable(false);
     }
 
+//  Gets the background color of the quiz answers for later use in the onResore and onSaveInstatceState methods
     public int getQuizAnswrBGColor(View quizAnswerView){
         int QuizAnswrColor = 0;
         Drawable answerBeckground = quizAnswerView.getBackground().mutate();
@@ -313,17 +314,18 @@ public class QuizOne extends AppCompatActivity {
         return QuizAnswrColor;
     }
 
+//    Intents the previous activity
     public void openMainActivity(){
         Intent openMainPage = new Intent(this, MainActivity.class);
         startActivity(openMainPage);
     }
-
+//    Intents the next activity
     public  void openQuizTwoActivity(){
         saveViewStatus();
         Intent openQuizTwo = new Intent(QuizOne.this, QuizTwo.class);
         startActivity(openQuizTwo);
     }
-
+//  Saves the status of the Views for use them on the onCreate method if returned from a following activity
     public void saveViewStatus(){
         quiz01Answer_a_isClickable = quiz01Answer_A.isClickable();
         quiz01Answer_b_isClickable = quiz01Answer_B.isClickable();

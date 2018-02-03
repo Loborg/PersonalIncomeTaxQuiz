@@ -37,6 +37,8 @@ public class Evaluation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_evaluation);
         quizTextAnswer = findViewById(R.id.q3_text_answer);
+
+        //Sets up the string for the emal
         evaluationMessage = getResources().getString(R.string.evaluate_message_start_string) + "\n\n"
                 + getResources().getString(R.string.quiz_question_01) + "\n"
                 + quizAnswers[0] + "\n\n"
@@ -100,6 +102,7 @@ public class Evaluation extends AppCompatActivity {
         quizAnswer_c[8] = findViewById(R.id.q9_c);
         quizAnswer_c[9] = findViewById(R.id.q10_c);
 
+        //Evaluate each of the quizzes
         QuizOne.evaluateQuizOne(
                 quizAnswers,
                 pointsForQuiz[0],
@@ -267,6 +270,7 @@ public class Evaluation extends AppCompatActivity {
     public void onBackPressed() {
     }
 
+//    Sets up the send button and Intents the default email app on the device
     public void sendButtonClick(View v){
         String title = getText(R.string.mail_title).toString();
         String mailto = "mailto:" + emailAdress;
@@ -278,6 +282,7 @@ public class Evaluation extends AppCompatActivity {
         startActivity(openEmailApp);
     }
 
+//  Restarts the quiz by clean all the data
     public void restartButtonClick(View v){
         Intent restartApp = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
         restartApp.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

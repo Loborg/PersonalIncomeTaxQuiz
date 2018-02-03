@@ -6,7 +6,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
-
+/**Displays the help message on the Third quiz by calling a dialogue pop up*/
 public class QuizThreeInformationDialog extends DialogFragment {
     @NonNull
     @Override
