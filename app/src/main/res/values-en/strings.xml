@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Personal Tncome Tax Quiz</string>
+    <string name="app_name">Personal Income Tax Quiz</string>
 
     <string name="quiz_question_01">Not tax relief</string>
     <string name="quiz_01_answer_a">the 5% of the monthly gross minimal wage / mounth, when a person is severely handicapped,</string>
