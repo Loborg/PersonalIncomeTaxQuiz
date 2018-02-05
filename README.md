@@ -1,4 +1,5 @@
 # PersonalIncomeTaxQuiz
+
 It is an app about the Hungarian Personal Income Tax low. I choose this theme because I wanted to help my girlfriend to learn for here certified accountant exam.
 The app is a multiscreen app
 The app handles the rotation of the Views
