@@ -9,10 +9,11 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**Created by <b>Loborg</b> at 2018.02.01<br>
-This Quiz Application is fro the 2017 Udacity Challenge Scholarship Android Bac Trek<br>
+This Quiz Application is for the 2017 Udacity Challenge Scholarship Android Bac Trek<br>
 I made the application to help the learning of my girlfriend.<br>
  <ul>
 <li>The theme of the app is the Hungarian Personal Income Tax system.<br>
@@ -21,7 +22,7 @@ I made the application to help the learning of my girlfriend.<br>
  <li>The app contains 10 question, some of the questions can be answered whit multiply answers, and some has only one correct answer. If the question has multiply correct answers, then there is a warning at the bottom of the page.<br><br>
 At the Main Page you have to give your name and email address, because the app is capable sending a personalized email, whit your score, from your favourite email app.<br>
 The Evaluation page contains all the correct and incorrect answers.<br>
-In all forms the correct answers is marked whit a green background, and the incorecct is marked whit a red background. On the Evaluation page the passible correct answer is marked whit a grey background<br>
+In all forms the correct answers is marked whit a green background, and the incorrect is marked whit a red background. On the Evaluation page the passable correct answer is marked whit a grey background<br>
 */
 
 public class MainActivity extends AppCompatActivity {
