@@ -24,7 +24,6 @@ At the Main Page you have to give your name and email address, because the app i
 The Evaluation page contains all the correct and incorrect answers.<br>
 In all forms the correct answers is marked whit a green background, and the incorrect is marked whit a red background. On the Evaluation page the passable correct answer is marked whit a grey background<br>
 */
-
 public class MainActivity extends AppCompatActivity {
 
     public static final String NEXT_ICON_IMAGE_COLOR_KEY = "next_icon_image_color_key";

@@ -266,6 +266,7 @@ public class Evaluation extends AppCompatActivity {
         outState.putInt(POINT_COUNTER_KEY, pointCounter);
     }
 
+    //Preventing the phones physicle back button press
     @Override
     public void onBackPressed() {
     }

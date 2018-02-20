@@ -40,7 +40,6 @@ public class QuizOne extends AppCompatActivity {
     private static int quiz01Answer_b_bg_color;
     private static int quiz01Answer_c_bg_color;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
